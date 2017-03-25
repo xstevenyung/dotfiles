@@ -1,6 +1,8 @@
 #!/bin/bash
 
-declare -a apm=('vim-mode-plus')
+# ln -fs ~/workspace/atom/atom.symlink ~/.atom
+
+declare -a apm=('vim-mode-plus' 'php-twig' 'symbol-gen')
 
 brew cask install atom
 
