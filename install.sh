@@ -6,15 +6,24 @@
 brew doctor
 brew update
 
-# Brew Caskroom Installation
+##################################
+### Brew Caskroom Installation ###
+##################################
+
 # VM
 brew cask install virtualbox
 brew cask install vagrant
+
 # Utility
 brew cask install flux
+
 # Communication
 brew cask install slack
 brew cask install gitter
 brew cask install discord
+
 # Editor
 brew cask install atom
+
+# Browser
+brew cask install google-chrome
