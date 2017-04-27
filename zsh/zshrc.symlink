@@ -83,3 +83,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Workspace aliases
+alias cdf="cd ~/workspace/dotfiles"
+alias vdf="vi ~/workspace/dotfiles"
+
+# Vagrant aliases
+alias vu="vagrant up"
+alias vs="vagrant up"
+alias vus="vagrant up;vagrant ssh"
+alias vh="vagrant halt"
