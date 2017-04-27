@@ -16,3 +16,5 @@ brew cask install flux
 brew cask install slack
 brew cask install gitter
 brew cask install discord
+# Editor
+brew cask install atom
