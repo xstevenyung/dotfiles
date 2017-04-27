@@ -85,11 +85,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Workspace aliases
+alias ws="cd ~/workspace"
 alias cdf="cd ~/workspace/dotfiles"
-alias vdf="vi ~/workspace/dotfiles"
+alias vdf="cd ~/workspace/dotfiles;vi ~/workspace/dotfiles"
 
 # Vagrant aliases
 alias vu="vagrant up"
-alias vs="vagrant up"
+alias vs="vagrant ssh"
 alias vus="vagrant up;vagrant ssh"
 alias vh="vagrant halt"
