@@ -12,3 +12,7 @@ brew cask install virtualbox
 brew cask install vagrant
 # Utility
 brew cask install flux
+# Communication
+brew cask install slack
+brew cask install gitter
+brew cask install discord
