@@ -7,6 +7,8 @@ brew doctor
 brew update
 
 # Brew Caskroom Installation
+# VM
 brew cask install virtualbox
 brew cask install vagrant
-
+# Utility
+brew cask install flux
