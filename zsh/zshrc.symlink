@@ -85,9 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Code aliases
-alias ws="cd ~/Code"
-alias p="cd ~/Code/projects"
-alias cdf="cd ~/Code/dotfiles"
+alias ws="cd ~/Code;ls -l"
+alias p="cd ~/Code/projects;ls -l"
+alias cdf="cd ~/Code/dotfiles;ls -l"
 alias vdf="cd ~/Code/dotfiles;vi ~/Code/dotfiles"
 alias adf="cd ~/Code/dotfiles;atom ~/Code/dotfiles"
 
