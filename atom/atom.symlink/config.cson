@@ -8,3 +8,7 @@
     userId: "cad50ffe-8315-476b-a839-4606efcceca8"
   welcome:
     showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
