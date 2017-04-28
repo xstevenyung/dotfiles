@@ -86,6 +86,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Code aliases
 alias ws="cd ~/Code"
+alias p="cd ~/Code/projects"
 alias cdf="cd ~/Code/dotfiles"
 alias vdf="cd ~/Code/dotfiles;vi ~/Code/dotfiles"
 alias adf="cd ~/Code/dotfiles;atom ~/Code/dotfiles"
