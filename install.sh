@@ -27,3 +27,6 @@ brew cask install google-chrome
 
 # Dev Tools
 brew cask install sourcetree
+
+# Entertainment
+brew cask install spotify
