@@ -2,7 +2,7 @@
 
 # Homestead
 vagrant box add laravel/homestead
-mkdir ~/workspace/homestead
-cd ~/workspace/homestead
+mkdir ~/Code/homestead
+cd ~/Code/homestead
 vagrant init laravel/homestead
 vagrant up

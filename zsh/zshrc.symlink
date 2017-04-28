@@ -84,10 +84,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Workspace aliases
-alias ws="cd ~/workspace"
-alias cdf="cd ~/workspace/dotfiles"
-alias vdf="cd ~/workspace/dotfiles;vi ~/workspace/dotfiles"
+# Code aliases
+alias ws="cd ~/Code"
+alias cdf="cd ~/Code/dotfiles"
+alias vdf="cd ~/Code/dotfiles;vi ~/Code/dotfiles"
+alias adf="cd ~/Code/dotfiles;atom ~/Code/dotfiles"
 
 # Vagrant aliases
 alias vu="vagrant up"
