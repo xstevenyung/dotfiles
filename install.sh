@@ -22,8 +22,8 @@ brew cask install slack
 brew cask install gitter
 brew cask install discord
 
-# Editor
-brew cask install atom
-
 # Browser
 brew cask install google-chrome
+
+# Dev Tools
+brew cask install sourcetree
