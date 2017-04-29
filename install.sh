@@ -14,6 +14,9 @@ brew update
 brew cask install virtualbox
 brew cask install vagrant
 
+# Productivity
+brew cask install evernote
+
 # Utility
 brew cask install flux
 
