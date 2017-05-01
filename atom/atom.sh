@@ -16,3 +16,4 @@ ln -fs ~/Code/dotfiles/atom/atom.symlink ~/.atom
 
 apm install vim-mode-plus
 apm install language-blade
+apm install language-vue
