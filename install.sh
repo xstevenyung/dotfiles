@@ -19,6 +19,7 @@ brew cask install evernote
 
 # Utility
 brew cask install flux
+brew cask install avast-mac-security
 
 # Communication
 brew cask install slack
