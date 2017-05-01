@@ -4,6 +4,7 @@
   editor:
     softWrap: true
     tabLength: 4
+  "editor-settings": {}
   "exception-reporting":
     userId: "cad50ffe-8315-476b-a839-4606efcceca8"
   welcome:
