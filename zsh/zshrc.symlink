@@ -96,3 +96,6 @@ alias vu="vagrant up"
 alias vs="vagrant ssh"
 alias vus="vagrant up;vagrant ssh"
 alias vh="vagrant halt"
+
+# Atom aliases
+alias a="atom"
