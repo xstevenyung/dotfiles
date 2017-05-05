@@ -76,5 +76,6 @@ Vagrant.configure("2") do |config|
         sudo apt-get -y install lubuntu-desktop
         sudo apt-get -y install libsdl1.2-dev # Use for GUI on games like Bomberman
         sudo apt-get -y install nodejs npm # Use for Gulp installation and other JS utility
+        sudo apt-get -y install valgrind # Use to debug C/C++ code
     SHELL
 end
