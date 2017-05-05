@@ -31,6 +31,7 @@ brew cask install google-chrome
 
 # Dev Tools
 brew cask install sourcetree
+brew cask install sequel-pro
 
 # Entertainment
 brew cask install spotify
