@@ -18,3 +18,4 @@ apm install vim-mode-plus
 apm install language-blade
 apm install language-vue
 apm install editorconfig
+apm install blame
