@@ -20,3 +20,4 @@ apm install language-vue
 apm install editorconfig
 apm install blame
 apm install emmet
+apm install file-icons
