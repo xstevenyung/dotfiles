@@ -99,3 +99,6 @@ alias vh="vagrant halt"
 
 # Atom aliases
 alias a="atom"
+
+# Laravel aliases
+alias hs="cd ~/Code;cd homestead;vagrant up;vagrant ssh"
