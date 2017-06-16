@@ -1,5 +1,6 @@
 "*":
   core:
+    excludeVcsIgnoredPaths: false
     telemetryConsent: "no"
   editor:
     softWrap: true
