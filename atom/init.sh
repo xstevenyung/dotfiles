@@ -8,6 +8,7 @@ brew cask install atom
 ####################
 
 mkdir ~/.atom
+rm -rf ~/.atom
 ln -fs ~/Code/dotfiles/atom/atom.symlink ~/.atom
 
 ############################

@@ -7,4 +7,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 chsh -s $(which zsh)
 
 # Setup zshrc
+rm -rf ~/.zshrc
 ln -s ~/Code/dotfiles/zsh/zshrc.symlink ~/.zshrc
