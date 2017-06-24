@@ -84,21 +84,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Code aliases
-alias ws="cd ~/Code;ls -l"
-alias p="cd ~/Code/projects;ls -l"
-alias cdf="cd ~/Code/dotfiles;ls -l"
-alias vdf="cd ~/Code/dotfiles;vi ~/Code/dotfiles"
-alias adf="cd ~/Code/dotfiles;atom ~/Code/dotfiles"
-
-# Vagrant aliases
-alias vu="vagrant up"
-alias vs="vagrant ssh"
-alias vus="vagrant up;vagrant ssh"
-alias vh="vagrant halt"
-
-# Atom aliases
-alias a="atom"
-
 # Laravel aliases
-alias hs="cd ~/Code;cd homestead;vagrant up;vagrant ssh"
+alias art="php artisan"
