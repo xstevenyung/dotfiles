@@ -20,4 +20,5 @@ brew cask install sourcetree
 brew cask install sequel-pro
 
 # Entertainment
+brew cask install vlc
 brew cask install spotify
