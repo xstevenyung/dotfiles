@@ -6,6 +6,7 @@
 brew doctor
 brew update
 
+source brew.sh
 source cask.sh
 source git.sh
 source macos.sh
