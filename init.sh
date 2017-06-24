@@ -9,8 +9,8 @@ brew update
 source cask.sh
 source git.sh
 source macos.sh
-source php.sh
 source atom/init.sh
 # source emacs/init.sh
+source php/init.sh
 # source vagrant/init.sh
 source zsh/init.sh

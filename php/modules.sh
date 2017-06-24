@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # PHP 5.4
-brew install homebrew/php/php54
+source ~/Code/dotfiles/php/unlink.sh
+brew link php54
 brew install homebrew/php/php54-apc
 brew install homebrew/php/php54-apcu
 brew install homebrew/php/php54-augmentedtypes
@@ -33,7 +34,8 @@ brew install homebrew/php/php54-libvirt
 brew install homebrew/php/php54-lz4
 
 # PHP 5.5
-brew install homebrew/php/php55
+source ~/Code/dotfiles/php/unlink.sh
+brew link php55
 brew install homebrew/php/php55-apcu
 brew install homebrew/php/php55-augmentedtypes
 brew install homebrew/php/php55-binpack
@@ -65,7 +67,8 @@ brew install homebrew/php/php55-lz4
 brew install homebrew/php/php55-lzf
 
 # PHP 5.6
-brew install homebrew/php/php56
+source ~/Code/dotfiles/php/unlink.sh
+brew link php56
 brew install homebrew/php/php56-apcu
 brew install homebrew/php/php56-augmentedtypes
 brew install homebrew/php/php56-binpack
@@ -97,7 +100,8 @@ brew install homebrew/php/php56-lzf
 brew install homebrew/php/php56-mailparse
 
 # PHP 7.0
-brew install homebrew/php/php70
+source ~/Code/dotfiles/php/unlink.sh
+brew link php70
 brew install homebrew/php/php70-blitz
 brew install homebrew/php/php70-ds
 brew install homebrew/php/php70-ev
@@ -129,7 +133,8 @@ brew install homebrew/php/php70-yac
 brew install homebrew/php/php70-rdkafka
 
 # PHP 7.1
-brew install homebrew/php/php71
+source ~/Code/dotfiles/php/unlink.sh
+brew link php71
 brew install homebrew/php/php71-blitz
 brew install homebrew/php/php71-ds
 brew install homebrew/php/php71-ev
@@ -159,3 +164,5 @@ brew install homebrew/php/php71-yaml
 brew install homebrew/php/php71-msgpack
 brew install homebrew/php/php71-uv
 brew install homebrew/php/php71-event
+
+source ~/Code/dotfiles/php/unlink.sh
