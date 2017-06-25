@@ -84,5 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Dotfiles
+alias dot="cd ~/Code/dotfiles"
+
 # Laravel aliases
+alias lara="cd ~/Code/projects/laravel/"
 alias art="php artisan"
