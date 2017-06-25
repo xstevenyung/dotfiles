@@ -18,6 +18,7 @@ brew cask install google-chrome
 # Dev Tools
 brew cask install sourcetree
 brew cask install sequel-pro
+brew cask install dash
 
 # Entertainment
 brew cask install vlc
