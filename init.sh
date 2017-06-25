@@ -9,6 +9,7 @@ brew update
 source brew.sh
 source cask.sh
 source git.sh
+source javascript.sh
 source macos.sh
 source atom/init.sh
 # source emacs/init.sh
