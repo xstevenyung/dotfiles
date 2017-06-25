@@ -2,6 +2,7 @@
 
 # Productivity
 brew cask install evernote
+brew cask install webcatalog
 
 # Utility
 brew cask install flux
@@ -19,6 +20,7 @@ brew cask install google-chrome
 brew cask install sourcetree
 brew cask install sequel-pro
 brew cask install dash
+brew cask install zeplin
 
 # Entertainment
 brew cask install vlc
