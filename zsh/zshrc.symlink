@@ -85,8 +85,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Dotfiles
-alias dot="cd ~/Code/dotfiles"
+alias dot="cd ~/Code/dotfiles;ls -la"
+
+# PHP
+alias phpunit="./vendor/bin/phpunit"
 
 # Laravel aliases
-alias lara="cd ~/Code/projects/laravel/"
+alias lara="cd ~/Code/projects/laravel/;ls -la"
 alias art="php artisan"
