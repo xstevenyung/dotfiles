@@ -20,6 +20,4 @@ brew link php71
 brew install homebrew/php/composer
 composer global require phpunit/phpunit
 
-# Valet
-composer global require laravel/valet
-~/.composer/vendor/bin/valet install
+source ~/Code/dotfiles/php/valet/init.sh
