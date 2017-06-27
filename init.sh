@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Create Code/
+mkdir ~/Code
+
+# Clone this repository
+cd ~/Code
+git clone https://github.com/stvnyung/dotfiles.git
+
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
