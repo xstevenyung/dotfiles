@@ -12,6 +12,8 @@ brew cask install avast-mac-security
 brew cask install slack
 brew cask install gitter
 brew cask install discord
+brew cask install teamviewer
+brew cask install skype
 
 # Browser
 brew cask install google-chrome
