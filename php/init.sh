@@ -18,6 +18,6 @@ brew link php71
 
 # Composer
 brew install homebrew/php/composer
-composer global require phpunit/phpunit
+composer global require laravel/envoy
 
 source ~/Code/dotfiles/php/valet/init.sh
