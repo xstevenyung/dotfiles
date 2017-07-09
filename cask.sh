@@ -23,6 +23,7 @@ brew cask install sourcetree
 brew cask install sequel-pro
 brew cask install dash
 brew cask install zeplin
+brew cask install postman
 
 # Entertainment
 brew cask install vlc
