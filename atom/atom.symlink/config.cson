@@ -2,6 +2,8 @@
   core:
     telemetryConsent: "no"
   editor:
+    showIndentGuide: true
+    showInvisibles: true
     softWrap: true
     tabLength: 4
   "editor-settings": {}
