@@ -5,6 +5,11 @@
     "require": {
         "league/climate": "^3.2"
     },
+    "autoload": {
+        "psr-4": {
+            "Dotfiles\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Steven Yung",

@@ -3,8 +3,22 @@
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
+use Dotfiles\Application;
 use League\CLImate\CLImate;
 
 $climate = new CLImate;
 
 $climate->out('Welcome to the dotfiles.');
+
+$climate->arguments->add([
+    'install' => [
+        'description' => 'Installation to execute',
+        'required' => true,
+    ],
+]);
+
+$climate->arguments->parse();
+
+$app = new Application($climate->arguments->get('install'));
+
+$app->run();
