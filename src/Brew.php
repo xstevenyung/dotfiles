@@ -4,7 +4,10 @@ namespace Dotfiles;
 
 class Brew
 {
-    const CMD = 'brew install';
+    function __construct()
+    {
+        $this->cmd = 'brew install';
+    }
 
     function run()
     {
@@ -15,7 +18,7 @@ class Brew
         ];
 
         foreach ($packages as $package) {
-            exec(self::CMD . ' ' . $package);
+            exec($this->cmd . ' ' . $package);
         }
     }
 }
