@@ -2,8 +2,10 @@
 
 namespace Dotfiles;
 
-class Cask extends InstallCommand
+class Cask
 {
+    use InstallPackages;
+
     function __construct()
     {
         $this->cmd = 'brew cask install';

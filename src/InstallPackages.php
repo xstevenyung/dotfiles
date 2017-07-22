@@ -2,7 +2,7 @@
 
 namespace Dotfiles;
 
-class InstallCommand
+trait InstallPackages
 {
     function run()
     {

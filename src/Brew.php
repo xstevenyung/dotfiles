@@ -2,8 +2,10 @@
 
 namespace Dotfiles;
 
-class Brew extends InstallCommand
+class Brew
 {
+    use InstallPackages;
+
     function __construct()
     {
         $this->cmd = 'brew install';
