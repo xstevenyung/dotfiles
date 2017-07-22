@@ -13,6 +13,8 @@ class Application
 
     function run()
     {
-        echo $this->cmd;
+        if ($this->cmd == 'brew') {
+            (new Brew)->run();
+        }
     }
 }
