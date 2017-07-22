@@ -14,6 +14,8 @@ class Application
             'brew' => Brew::class,
             'cask' => Cask::class,
             'git' => Git::class,
+            'macos' => MacOs::class,
+            'java' => Java::class,
         ];
     }
 
