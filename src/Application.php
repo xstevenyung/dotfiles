@@ -15,6 +15,8 @@ class Application
     {
         if ($this->cmd == 'brew') {
             (new Brew)->run();
+        } else if ($this->cmd == 'cask') {
+            (new Cask)->run();
         }
     }
 }
