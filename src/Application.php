@@ -5,20 +5,20 @@ namespace Dotfiles;
 class Application
 {
     private $cmd;
+    private $installer;
 
     function __construct($cmd)
     {
         $this->cmd = $cmd;
+        $this->installer = [
+            'brew' => Brew::class,
+            'cask' => Cask::class,
+            'git' => Git::class,
+        ];
     }
 
     function run()
     {
-        if ($this->cmd == 'brew') {
-            (new Brew)->run();
-        } else if ($this->cmd == 'cask') {
-            (new Cask)->run();
-        } else if ($this->cmd == 'git') {
-            (new Git)->run();
-        }
+        (new $this->installer[$this->cmd])->run();
     }
 }
