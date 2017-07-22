@@ -17,6 +17,7 @@ brew cask install skype
 
 # Browser
 brew cask install google-chrome
+brew cask install firefox
 
 # Dev Tools
 brew cask install sourcetree
