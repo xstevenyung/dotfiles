@@ -2,23 +2,15 @@
 
 namespace Dotfiles;
 
-class Brew
+class Brew extends InstallCommand
 {
     function __construct()
     {
         $this->cmd = 'brew install';
-    }
-
-    function run()
-    {
-        $packages = [
+        $this->packages = [
             'mysql',
             'tmux',
             'the_silver_searcher',
         ];
-
-        foreach ($packages as $package) {
-            exec($this->cmd . ' ' . $package);
-        }
     }
 }
