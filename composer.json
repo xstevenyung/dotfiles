@@ -1,0 +1,14 @@
+{
+    "name": "stvn/dotfiles",
+    "description": "A full PHP command-line dotfiles",
+    "type": "project",
+    "require": {
+        "league/climate": "^3.2"
+    },
+    "authors": [
+        {
+            "name": "Steven Yung",
+            "email": "stevenyung@icloud.com"
+        }
+    ]
+}
