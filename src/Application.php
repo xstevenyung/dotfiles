@@ -17,6 +17,8 @@ class Application
             (new Brew)->run();
         } else if ($this->cmd == 'cask') {
             (new Cask)->run();
+        } else if ($this->cmd == 'cask') {
+            (new Git)->run();
         }
     }
 }
