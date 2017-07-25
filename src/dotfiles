@@ -19,6 +19,5 @@ $climate->arguments->add([
 
 $climate->arguments->parse();
 
-$app = new Application($climate->arguments->get('install'));
-
+$app = new Application($climate);
 $app->run();
