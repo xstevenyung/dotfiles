@@ -8,7 +8,7 @@ class Javascript
     {
         $this->cmds = [
             'brew' => 'brew install',
-            'npm' => 'npm install',
+            'npm-global' => 'npm install -g',
         ];
 
         $this->packages = [
@@ -16,7 +16,7 @@ class Javascript
                 'npm',
                 'yarn',
             ],
-            'npm' => [
+            'npm-global' => [
                 'gulp-cli',
                 'vue-cli',
             ],
