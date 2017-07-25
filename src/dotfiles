@@ -13,7 +13,6 @@ $climate->out('Welcome to the dotfiles.');
 $climate->arguments->add([
     'install' => [
         'description' => 'Installation to execute',
-        'required' => true,
     ],
 ]);
 

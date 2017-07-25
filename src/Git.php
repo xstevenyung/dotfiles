@@ -12,6 +12,5 @@ class Git
 
         # Setup vi as default editor
         exec('git config --global core.editor vi');
-
     }
 }

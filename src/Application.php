@@ -26,6 +26,10 @@ class Application
 
     function run()
     {
+        if (!$this->cmd) {
+            $this->cmd = $this->climate->radio('Choose a installer to execute:', array_keys($this->installer))->prompt();
+        }
+
         if (!array_key_exists($this->cmd, $this->installer))
         {
             $this->climate->to('error')->red("Installer {$this->cmd} doesn't exists.");
