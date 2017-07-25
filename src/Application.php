@@ -20,6 +20,7 @@ class Application
             'git' => Git::class,
             'macos' => MacOs::class,
             'java' => Java::class,
+            'javascript' => Javascript::class,
         ];
     }
 
