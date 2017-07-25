@@ -5,3 +5,8 @@ define('DOTFILES_PATH', '~/Code/dotfiles');
 
 exec('git clone https://github.com/stvnyung/dotfiles ' . DOTFILES_PATH);
 exec('ln -fs ' . DOTFILES_PATH .'/src/dotfiles /usr/local/bin/');
+
+/* Install Homebrew */
+exec('/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"');
+exec('brew doctor');
+exec('brew update');
