@@ -2,7 +2,7 @@
 
 namespace Dotfiles;
 
-class MacOs
+class MacOS
 {
     use InstallPackages;
 
