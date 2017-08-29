@@ -9,10 +9,17 @@ abstract class Installer
     public function run()
     {
         $file = file_get_contents(config_path($this->file));
-        $this->packages = Yaml::parse($file);
+        $this->installers = Yaml::parse($file);
 
-        foreach ($this->packages as $package) {
-            exec("{$this->cmd} {$package}");
+        foreach ($this->installers as $installer)
+        {
+            $installer = reset($installer);
+            $cmd = $installer['cmd'];
+            $packages = $installer['packages'];
+
+            foreach ($packages as $package) {
+                exec("{$cmd} {$package}");
+            }
         }
     }
 
@@ -22,13 +29,11 @@ abstract class Installer
 
     public function __get($name)
     {
-        if ('cmd' === $name)
-        {
+        if ('cmd' === $name) {
             return $this->cmd();
         }
 
-        if ('file' === $name)
-        {
+        if ('file' === $name) {
             return $this->file();
         }
     }
