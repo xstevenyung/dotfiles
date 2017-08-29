@@ -2,6 +2,8 @@
 
 namespace Dotfiles;
 
+use Symfony\Component\Yaml\Yaml;
+
 class Brew
 {
     use InstallPackages;
@@ -9,10 +11,7 @@ class Brew
     function __construct()
     {
         $this->cmd = 'brew install';
-        $this->packages = [
-            'mysql',
-            'tmux',
-            'the_silver_searcher',
-        ];
+        $this->file = file_get_contents(config_path('brew.yml'));
+        $this->packages = Yaml::parse($this->file);
     }
 }
