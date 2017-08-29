@@ -4,13 +4,8 @@ namespace Dotfiles\Configurators;
 
 class Git extends Configurator
 {
-    public function run()
+    protected function file()
     {
-        # Setup Git user config
-        exec('git config --global user.name "Steven Yung"');
-        exec('git config --global user.email stevenyung@icloud.com');
-
-        # Setup vi as default editor
-        exec('git config --global core.editor vi');
+        return 'configurators/git.yml';
     }
 }
