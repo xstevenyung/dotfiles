@@ -3,8 +3,7 @@
 namespace Dotfiles;
 
 use League\CLImate\CLImate;
-use Dotfiles\Configurators\{Git, MacOS};
-use Dotfiles\Installers\{Brew, Cask, Java, Javascript};
+use Dotfiles\{Configurators, Installers};
 
 class Application
 {
@@ -17,12 +16,13 @@ class Application
         $this->climate = $climate;
         $this->cmd = $this->climate->arguments->get('install');
         $this->installer = [
-            'brew' => Brew::class,
-            'cask' => Cask::class,
-            'git' => Git::class,
-            'macos' => MacOS::class,
-            'java' => Java::class,
-            'javascript' => Javascript::class,
+            'git' => Configurators\Git::class,
+            'macos' => Configurators\MacOS::class,
+
+            'brew' => Installers\Brew::class,
+            'cask' => Installers\Cask::class,
+            'java' => Installers\Java::class,
+            'javascript' => Installers\Javascript::class,
         ];
     }
 
