@@ -9,21 +9,25 @@ abstract class Installer
     public function run()
     {
         $file = file_get_contents(config_path($this->file));
-        $this->installers = Yaml::parse($file);
+        $installers = Yaml::parse($file);
 
-        foreach ($this->installers as $installer)
+        foreach ($installers as $manager => $packages)
         {
-            $installer = reset($installer);
-            $cmd = $installer['cmd'];
-            $packages = $installer['packages'];
+            $cmd = self::cmd($manager);
+            $packages = implode(' ', $packages);
 
-            foreach ($packages as $package) {
-                exec("{$cmd} {$package}");
-            }
+            exec("{$cmd} {$packages}");
         }
     }
 
-    abstract protected function cmd();
+    protected static function cmd($manager)
+    {
+        $cmds = [
+            'brew' => 'brew install',
+        ];
+
+        return $cmds[$manager];
+    }
 
     abstract protected function file();
 

@@ -1,6 +1,4 @@
-- brew:
-    cmd: brew install
-    packages:
-        - mysql
-        - tmux
-        - the_silver_searcher
+brew:
+    - mysql
+    - tmux
+    - the_silver_searcher
