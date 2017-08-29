@@ -1,12 +1,10 @@
 <?php
 
-namespace Dotfiles;
+namespace Dotfiles\Configurators;
 
-class MacOS
+class MacOS extends Configurator
 {
-    use InstallPackages;
-
-    function run()
+    public function run()
     {
         exec('defaults write com.apple.dock static-only -bool TRUE'); // Only show active apps
         exec('defaults write com.apple.dock autohide-time-modifier -int 0'); // Remove Dock hide / show animation

@@ -1,10 +1,10 @@
 <?php
 
-namespace Dotfiles;
+namespace Dotfiles\Configurators;
 
-class Git
+class Git extends Configurator
 {
-    function run()
+    public function run()
     {
         # Setup Git user config
         exec('git config --global user.name "Steven Yung"');
