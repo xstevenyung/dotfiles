@@ -2,6 +2,8 @@
 
 namespace Dotfiles;
 
+use Symfony\Component\Yaml\Yaml;
+
 class Java
 {
     use InstallPackages;
@@ -9,10 +11,7 @@ class Java
     function __construct()
     {
         $this->cmd = 'brew install';
-        $this->packages = [
-            'java',
-            'intellij-idea',
-            'sts',
-        ];
+        $this->file = file_get_contents(config_path('java.yml'));
+        $this->packages = Yaml::parse($this->file);
     }
 }
