@@ -2,6 +2,8 @@
 
 namespace Dotfiles;
 
+use Symfony\Component\Yaml\Yaml;
+
 class Cask
 {
     use InstallPackages;
@@ -9,36 +11,7 @@ class Cask
     function __construct()
     {
         $this->cmd = 'brew cask install';
-        $this->packages = [
-            /* Productivity */
-            'evernote',
-            'webcatalog',
-
-            /* Utility */
-            'flux',
-            'avast-mac-security',
-
-            /* Communication */
-            'slack',
-            'gitter',
-            'discord',
-            'teamviewer',
-            'skype',
-
-            /* Browser */
-            'google-chrome',
-            'firefox',
-
-            /* Dev Tools */
-            'sourcetree',
-            'sequel-pro',
-            'dash',
-            'zeplin',
-            'postman',
-
-            /* Entertainment */
-            'vlc',
-            'spotify',
-        ];
+        $this->file = file_get_contents(config_path('cask.yml'));
+        $this->packages = Yaml::parse($this->file);
     }
 }
