@@ -2,16 +2,15 @@
 
 namespace Dotfiles;
 
-use Symfony\Component\Yaml\Yaml;
-
-class Cask
+class Cask extends Installer
 {
-    use InstallPackages;
-
-    function __construct()
+    protected function cmd()
     {
-        $this->cmd = 'brew cask install';
-        $this->file = file_get_contents(config_path('cask.yml'));
-        $this->packages = Yaml::parse($this->file);
+        return 'brew cask install';
+    }
+
+    protected function file()
+    {
+        return 'cask.yml';
     }
 }

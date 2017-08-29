@@ -2,16 +2,15 @@
 
 namespace Dotfiles;
 
-use Symfony\Component\Yaml\Yaml;
-
-class Java
+class Java extends Installer
 {
-    use InstallPackages;
-
-    function __construct()
+    protected function cmd()
     {
-        $this->cmd = 'brew install';
-        $this->file = file_get_contents(config_path('java.yml'));
-        $this->packages = Yaml::parse($this->file);
+        return 'brew install';
+    }
+
+    protected function file()
+    {
+        return 'java.yml';
     }
 }
