@@ -1,12 +1,12 @@
 <?php
 
-namespace Dotfiles;
+namespace Dotfiles\Installers;
 
 class Javascript extends Installer
 {
     protected function file()
     {
-        return 'javascript.yml';
+        return 'installers/javascript.yml';
     }
 
     // function __construct()

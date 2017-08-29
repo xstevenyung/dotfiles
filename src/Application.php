@@ -3,6 +3,7 @@
 namespace Dotfiles;
 
 use League\CLImate\CLImate;
+use Dotfiles\Installers\{Brew, Cask, Java, Javascript};
 
 class Application
 {

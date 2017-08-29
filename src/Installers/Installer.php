@@ -1,6 +1,6 @@
 <?php
 
-namespace Dotfiles;
+namespace Dotfiles\Installers;
 
 use Symfony\Component\Yaml\Yaml;
 

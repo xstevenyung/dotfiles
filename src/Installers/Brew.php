@@ -1,12 +1,12 @@
 <?php
 
-namespace Dotfiles;
+namespace Dotfiles\Installers;
 
 class Brew extends Installer
 {
 
     protected function file()
     {
-        return 'brew.yml';
+        return 'installers/brew.yml';
     }
 }

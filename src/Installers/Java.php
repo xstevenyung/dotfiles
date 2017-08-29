@@ -1,11 +1,11 @@
 <?php
 
-namespace Dotfiles;
+namespace Dotfiles\Installers;
 
 class Java extends Installer
 {
     protected function file()
     {
-        return 'java.yml';
+        return 'installers/java.yml';
     }
 }
