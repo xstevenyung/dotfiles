@@ -2,11 +2,12 @@
 
 namespace Dotfiles\Installers;
 
-use Dotfiles\Traits\ReadYaml;
+use Dotfiles\Traits\{ReadYaml, MapFunctionAsAttribute};
 
 abstract class Installer
 {
-    use ReadYaml;
+    use ReadYaml,
+        MapFunctionAsAttribute;
 
     public function run()
     {
@@ -33,15 +34,4 @@ abstract class Installer
     }
 
     abstract protected function file();
-
-    public function __get($name)
-    {
-        if ('cmd' === $name) {
-            return $this->cmd();
-        }
-
-        if ('file' === $name) {
-            return $this->file();
-        }
-    }
 }
