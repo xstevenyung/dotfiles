@@ -18,4 +18,10 @@ if (! function_exists('base_path'))
     }
 }
 
-echo base_path();
+if (! function_exists('config_path'))
+{
+    function config_path($path = '')
+    {
+        return base_path('config') . '/' . $path;
+    }
+}
