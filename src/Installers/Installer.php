@@ -2,14 +2,15 @@
 
 namespace Dotfiles\Installers;
 
-use Symfony\Component\Yaml\Yaml;
+use Dotfiles\Traits\ReadYaml;
 
 abstract class Installer
 {
+    use ReadYaml;
+
     public function run()
     {
-        $file = file_get_contents(config_path($this->file));
-        $installers = Yaml::parse($file);
+        $installers = self::read($this->file);
 
         foreach ($installers as $manager => $packages)
         {
