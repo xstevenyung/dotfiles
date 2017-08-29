@@ -4,11 +4,9 @@ namespace Dotfiles;
 
 use Symfony\Component\Yaml\Yaml;
 
-class Brew
+class Brew extends Installer
 {
-    use InstallPackages;
-
-    function __construct()
+    public function __construct()
     {
         $this->cmd = 'brew install';
         $this->file = file_get_contents(config_path('brew.yml'));
