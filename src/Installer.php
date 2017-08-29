@@ -2,7 +2,7 @@
 
 namespace Dotfiles;
 
-class Installer
+abstract class Installer
 {
     public function run()
     {
@@ -10,4 +10,8 @@ class Installer
             exec("{$this->cmd} {$package}");
         }
     }
+
+    abstract protected function cmd();
+
+    abstract protected function file();
 }
