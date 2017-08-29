@@ -1,3 +1,4 @@
-- java
-- intellij-idea
-- sts
+brew:
+    - java
+    - intellij-idea
+    - sts

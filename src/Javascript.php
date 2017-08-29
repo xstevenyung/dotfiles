@@ -2,37 +2,42 @@
 
 namespace Dotfiles;
 
-class Javascript
+class Javascript extends Installer
 {
-    function __construct()
+    protected function file()
     {
-        $this->cmds = [
-            'brew' => 'brew install',
-            'npm-global' => 'npm install -g',
-        ];
-
-        $this->packages = [
-            'brew' => [
-                'npm',
-                'yarn',
-            ],
-            'npm-global' => [
-                'gulp-cli',
-                'vue-cli',
-            ],
-        ];
+        return 'javascript.yml';
     }
 
-    function run()
-    {
-        foreach ($this->packages as $packageManager => $packages)
-        {
-            $cmd = $this->cmds[$packageManager];
-
-            foreach ($packages as $package)
-            {
-                exec("{$cmd} {$package}");
-            }
-        }
-    }
+    // function __construct()
+    // {
+    //     $this->cmds = [
+    //         'brew' => 'brew install',
+    //         'npm-global' => 'npm install -g',
+    //     ];
+    //
+    //     $this->packages = [
+    //         'brew' => [
+    //             'npm',
+    //             'yarn',
+    //         ],
+    //         'npm-global' => [
+    //             'gulp-cli',
+    //             'vue-cli',
+    //         ],
+    //     ];
+    // }
+    //
+    // function run()
+    // {
+    //     foreach ($this->packages as $packageManager => $packages)
+    //     {
+    //         $cmd = $this->cmds[$packageManager];
+    //
+    //         foreach ($packages as $package)
+    //         {
+    //             exec("{$cmd} {$package}");
+    //         }
+    //     }
+    // }
 }

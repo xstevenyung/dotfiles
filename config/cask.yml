@@ -1,29 +1,30 @@
-# Productivity
-- evernote
-- webcatalog
+cask:
+    # Productivity
+    - evernote
+    - webcatalog
 
-# Utility
-- flux
-- avast-mac-security
+    # Utility
+    - flux
+    - avast-mac-security
 
-# Communication
-- slack
-- gitter
-- discord
-- teamviewer
-- skype
+    # Communication
+    - slack
+    - gitter
+    - discord
+    - teamviewer
+    - skype
 
-# Browser
-- google-chrome
-- firefox
+    # Browser
+    - google-chrome
+    - firefox
 
-# Dev Tools
-- sourcetree
-- sequel-pro
-- dash
-- zeplin
-- postman
+    # Dev Tools
+    - sourcetree
+    - sequel-pro
+    - dash
+    - zeplin
+    - postman
 
-# Entertainment
-- vlc
-- spotify
+    # Entertainment
+    - vlc
+    - spotify
