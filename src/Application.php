@@ -25,6 +25,8 @@ class Application
             'javascript' => Installers\Javascript::class,
 
             'atom' => Symlinkers\Atom::class,
+            'spacemacs' => Symlinkers\Spacemacs::class,
+            'zsh' => Symlinkers\Zsh::class,
         ];
     }
 
