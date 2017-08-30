@@ -17,6 +17,7 @@ class Application
         $this->cmd = $this->climate->arguments->get('install');
         $this->installer = [
             'atom' => Environments\Atom::class,
+            'zsh' => Environments\Zsh::class,
 
             'git' => Configurators\Git::class,
             'macos' => Configurators\MacOS::class,
@@ -29,7 +30,7 @@ class Application
 
             // 'atom' => Symlinkers\Atom::class,
             'spacemacs' => Symlinkers\Spacemacs::class,
-            'zsh' => Symlinkers\Zsh::class,
+            // 'zsh' => Symlinkers\Zsh::class,
         ];
     }
 
