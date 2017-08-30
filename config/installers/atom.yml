@@ -1,0 +1,11 @@
+cask:
+    - atom
+
+apm:
+    - vim-mode-plus
+    - language-blade
+    - language-vue
+    - editorconfig
+    - blame
+    - emmet
+    - file-icons

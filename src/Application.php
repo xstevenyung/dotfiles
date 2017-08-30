@@ -19,12 +19,13 @@ class Application
             'git' => Configurators\Git::class,
             'macos' => Configurators\MacOS::class,
 
+            'atom' => Installers\Atom::class,
             'brew' => Installers\Brew::class,
             'cask' => Installers\Cask::class,
             'java' => Installers\Java::class,
             'javascript' => Installers\Javascript::class,
 
-            'atom' => Symlinkers\Atom::class,
+            // 'atom' => Symlinkers\Atom::class,
             'spacemacs' => Symlinkers\Spacemacs::class,
             'zsh' => Symlinkers\Zsh::class,
         ];

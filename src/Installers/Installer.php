@@ -28,6 +28,7 @@ abstract class Installer
             'brew' => 'brew install',
             'cask' => 'brew cask install',
             'npm-global' => 'npm install -g',
+            'apm' => 'apm install',
         ];
 
         return $cmds[$manager];
