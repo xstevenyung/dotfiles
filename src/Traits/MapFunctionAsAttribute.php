@@ -13,5 +13,9 @@ trait MapFunctionAsAttribute
         if ('file' === $name) {
             return $this->file();
         }
+
+        if ('destination' === $name) {
+            return $this->destination();
+        }
     }
 }

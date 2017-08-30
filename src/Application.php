@@ -3,7 +3,7 @@
 namespace Dotfiles;
 
 use League\CLImate\CLImate;
-use Dotfiles\{Configurators, Installers};
+use Dotfiles\{Configurators, Installers, Symlinkers};
 
 class Application
 {
@@ -23,6 +23,8 @@ class Application
             'cask' => Installers\Cask::class,
             'java' => Installers\Java::class,
             'javascript' => Installers\Javascript::class,
+
+            'atom' => Symlinkers\Atom::class,
         ];
     }
 
