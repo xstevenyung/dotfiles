@@ -4,34 +4,20 @@ namespace Dotfiles\Environments;
 
 use Dotfiles\{Installers, Configurators, Symlinkers};
 
-class Atom
+class Atom extends Environment
 {
-    private function installer()
+    protected function installer()
     {
         return Installers\Atom::class;
     }
 
-    private function configurator()
+    protected function configurator()
     {
         //
     }
 
-    private function symlinker()
+    protected function symlinker()
     {
         return Symlinkers\Atom::class;
-    }
-
-    public function run()
-    {
-        if ($installer = $this->installer()) {
-            (new $installer)->run();
-        }
-
-        if ($configurator = $this->configurator()) {
-            (new $configurator)->run();
-        }
-        if ($symlinker = $this->symlinker()) {
-            (new $symlinker)->run();
-        }
     }
 }
