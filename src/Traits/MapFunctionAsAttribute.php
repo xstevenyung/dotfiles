@@ -6,16 +6,6 @@ trait MapFunctionAsAttribute
 {
     public function __get($name)
     {
-        if ('cmd' === $name) {
-            return $this->cmd();
-        }
-
-        if ('file' === $name) {
-            return $this->file();
-        }
-
-        if ('destination' === $name) {
-            return $this->destination();
-        }
+        return $this->$name();
     }
 }
