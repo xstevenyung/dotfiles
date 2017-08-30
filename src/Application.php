@@ -3,7 +3,7 @@
 namespace Dotfiles;
 
 use League\CLImate\CLImate;
-use Dotfiles\{Configurators, Installers, Symlinkers};
+use Dotfiles\{Configurators, Installers, Symlinkers, Environments};
 
 class Application
 {
@@ -16,10 +16,12 @@ class Application
         $this->climate = $climate;
         $this->cmd = $this->climate->arguments->get('install');
         $this->installer = [
+            'atom' => Environments\Atom::class,
+
             'git' => Configurators\Git::class,
             'macos' => Configurators\MacOS::class,
 
-            'atom' => Installers\Atom::class,
+            // 'atom' => Installers\Atom::class,
             'brew' => Installers\Brew::class,
             'cask' => Installers\Cask::class,
             'java' => Installers\Java::class,
