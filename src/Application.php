@@ -20,8 +20,13 @@ class Application
         $this->cmd = $this->climate->arguments->get('install');
         $this->environment = [
             'atom' => Environments\Atom::class,
+            'brew' => Environments\Brew::class,
+            'cask' => Environments\Cask::class,
+            'git' => Environments\Git::class,
+            'macos' => Environments\MacOS::class,
             'php' => Environments\PHP::class,
             'zsh' => Environments\Zsh::class,
+            // 'example' => Environments\Example::class,
 
             // 'git' => Configurators\Git::class,
             // 'macos' => Configurators\MacOS::class,
