@@ -17,6 +17,7 @@ class Application
         $this->cmd = $this->climate->arguments->get('install');
         $this->environment = [
             'atom' => Environments\Atom::class,
+            'php' => Environments\PHP::class,
             'zsh' => Environments\Zsh::class,
 
             // 'git' => Configurators\Git::class,

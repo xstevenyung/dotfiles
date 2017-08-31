@@ -30,6 +30,8 @@ abstract class Installer
 
                 $this->afterEach($package);
             }
+
+            $this->afterEachManager($manager);
         }
     }
 
@@ -50,6 +52,11 @@ abstract class Installer
     abstract protected function file();
 
     protected function afterEach($package)
+    {
+        //
+    }
+
+    protected function afterEachManager($manager)
     {
         //
     }
