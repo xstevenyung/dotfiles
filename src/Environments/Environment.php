@@ -16,14 +16,24 @@ abstract class Environment
 
     public function run()
     {
-        if ($this->installer) {
+        if ($this->installer)
+        {
+            print("Running installer\n");
+
             (new $this->installer)->run();
         }
 
-        if ($configurator = $this->configurator()) {
+        if ($configurator = $this->configurator())
+        {
+            print("Running configurator\n");
+
             (new $configurator)->run();
         }
-        if ($symlinker = $this->symlinker()) {
+
+        if ($symlinker = $this->symlinker())
+        {
+            print("Running symlinker\n");
+
             (new $symlinker)->run();
         }
     }
