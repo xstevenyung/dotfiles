@@ -9,16 +9,27 @@ abstract class Installer
     use ReadYaml,
         MapFunctionAsAttribute;
 
+    protected function before()
+    {
+        //
+    }
+
     public function run()
     {
+        $this->before();
+
         $installers = self::read($this->file);
 
         foreach ($installers as $manager => $packages)
         {
             $cmd = self::cmd($manager);
-            $packages = implode(' ', $packages);
 
-            exec("{$cmd} {$packages}");
+            foreach ($packages as $package)
+            {
+                exec("{$cmd} {$package}");
+
+                $this->afterEach($package);
+            }
         }
     }
 
@@ -37,4 +48,14 @@ abstract class Installer
     }
 
     abstract protected function file();
+
+    protected function afterEach($package)
+    {
+        //
+    }
+
+    protected function after()
+    {
+        //
+    }
 }
