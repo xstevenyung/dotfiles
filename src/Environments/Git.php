@@ -6,20 +6,20 @@ use Dotfiles\Installers;
 use Dotfiles\Configurators;
 use Dotfiles\Symlinkers;
 
-class PHP extends Environment
+class Git extends Environment
 {
     protected function installer()
     {
-        return Installers\PHP::class;
+        return Installers\Git::class;
     }
 
     protected function configurator()
     {
-        return Configurators\PHP::class;
+        return Configurators\Git::class;
     }
 
     protected function symlinker()
     {
-        return Symlinkers\PHP::class;
+        return Symlinkers\Git::class;
     }
 }

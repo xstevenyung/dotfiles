@@ -6,20 +6,20 @@ use Dotfiles\Installers;
 use Dotfiles\Configurators;
 use Dotfiles\Symlinkers;
 
-class PHP extends Environment
+class Brew extends Environment
 {
     protected function installer()
     {
-        return Installers\PHP::class;
+        return Installers\Brew::class;
     }
 
     protected function configurator()
     {
-        return Configurators\PHP::class;
+        return Configurators\Brew::class;
     }
 
     protected function symlinker()
     {
-        return Symlinkers\PHP::class;
+        return Symlinkers\Brew::class;
     }
 }

@@ -15,7 +15,7 @@ class Atom extends Environment
 
     protected function configurator()
     {
-        //
+        return Configurators\Atom::class;
     }
 
     protected function symlinker()

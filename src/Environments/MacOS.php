@@ -6,20 +6,20 @@ use Dotfiles\Installers;
 use Dotfiles\Configurators;
 use Dotfiles\Symlinkers;
 
-class PHP extends Environment
+class MacOS extends Environment
 {
     protected function installer()
     {
-        return Installers\PHP::class;
+        return Installers\MacOS::class;
     }
 
     protected function configurator()
     {
-        return Configurators\PHP::class;
+        return Configurators\MacOS::class;
     }
 
     protected function symlinker()
     {
-        return Symlinkers\PHP::class;
+        return Symlinkers\MacOS::class;
     }
 }

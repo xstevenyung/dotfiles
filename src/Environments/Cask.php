@@ -6,20 +6,20 @@ use Dotfiles\Installers;
 use Dotfiles\Configurators;
 use Dotfiles\Symlinkers;
 
-class PHP extends Environment
+class Cask extends Environment
 {
     protected function installer()
     {
-        return Installers\PHP::class;
+        return Installers\Cask::class;
     }
 
     protected function configurator()
     {
-        return Configurators\PHP::class;
+        return Configurators\Cask::class;
     }
 
     protected function symlinker()
     {
-        return Symlinkers\PHP::class;
+        return Symlinkers\Cask::class;
     }
 }

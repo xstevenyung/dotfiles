@@ -6,20 +6,20 @@ use Dotfiles\Installers;
 use Dotfiles\Configurators;
 use Dotfiles\Symlinkers;
 
-class PHP extends Environment
+class Java extends Environment
 {
     protected function installer()
     {
-        return Installers\PHP::class;
+        return Installers\Java::class;
     }
 
     protected function configurator()
     {
-        return Configurators\PHP::class;
+        return Configurators\Java::class;
     }
 
     protected function symlinker()
     {
-        return Symlinkers\PHP::class;
+        return Symlinkers\Java::class;
     }
 }
