@@ -30,6 +30,7 @@ abstract class Installer
             'npm-global' => 'npm install -g',
             'apm' => 'apm install',
             'sh' => 'sh',
+            'composer-global' => 'composer global require',
         ];
 
         return $cmds[$manager];
