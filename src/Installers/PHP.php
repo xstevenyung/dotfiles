@@ -6,7 +6,7 @@ class PHP extends Installer
 {
     protected function before()
     {
-        $this->unlink();
+        $this->unlinkAll();
     }
 
     protected function file()
@@ -16,14 +16,14 @@ class PHP extends Installer
 
     protected function afterEach($package)
     {
-        $this->unlink();
+        $this->unlinkAll();
     }
 
     protected function afterEachManager($manager)
     {
-        $this->unlink();
+        $this->unlinkAll();
 
-        exec('brew link php71');
+        $this->link('php71');
     }
 
     protected function after()
@@ -31,12 +31,17 @@ class PHP extends Installer
         //
     }
 
-    private function unlink()
+    private function unlinkAll()
     {
         exec('brew unlink php54');
         exec('brew unlink php55');
         exec('brew unlink php56');
         exec('brew unlink php70');
         exec('brew unlink php71');
+    }
+
+    private function link($version)
+    {
+        exec("brew link {$version}");
     }
 }
