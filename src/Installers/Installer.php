@@ -2,7 +2,8 @@
 
 namespace Dotfiles\Installers;
 
-use Dotfiles\Traits\{ReadYaml, MapFunctionAsAttribute};
+use Dotfiles\Traits\ReadYaml;
+use Dotfiles\Traits\MapFunctionAsAttribute;
 
 abstract class Installer
 {

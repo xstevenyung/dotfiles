@@ -3,7 +3,10 @@
 namespace Dotfiles;
 
 use League\CLImate\CLImate;
-use Dotfiles\{Configurators, Installers, Symlinkers, Environments};
+use Dotfiles\Configurators;
+use Dotfiles\Installers;
+use Dotfiles\Symlinkers;
+use Dotfiles\Environments;
 
 class Application
 {

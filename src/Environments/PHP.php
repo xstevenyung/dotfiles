@@ -2,7 +2,9 @@
 
 namespace Dotfiles\Environments;
 
-use Dotfiles\{Installers, Configurators, Symlinkers};
+use Dotfiles\Installers;
+use Dotfiles\Configurators;
+use Dotfiles\Symlinkers;
 
 class PHP extends Environment
 {
