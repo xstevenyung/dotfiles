@@ -10,16 +10,39 @@ class Atom extends Environment
 {
     protected function installer()
     {
-        return Installers\Atom::class;
+        $class = '\\Dotfiles\\Installers\\' . $this->getShortName();
+
+        if (class_exists($class)) {
+            return (new $class);
+        }
+
+        return false;
     }
 
     protected function configurator()
     {
-        return Configurators\Atom::class;
+        $class = '\\Dotfiles\\Configurators\\' . $this->getShortName();
+
+        if (class_exists($class)) {
+            return (new $class);
+        }
+
+        return false;
     }
 
     protected function symlinker()
     {
-        return Symlinkers\Atom::class;
+        $class = '\\Dotfiles\\Symlinkers\\' . $this->getShortName();
+
+        if (class_exists($class)) {
+            return (new $class);
+        }
+
+        return false;
+    }
+
+    private function getShortName()
+    {
+        return (new \ReflectionClass($this))->getShortName();
     }
 }

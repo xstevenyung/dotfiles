@@ -42,6 +42,7 @@ class Application
         if (! array_key_exists($this->cmd, $this->environments()))
         {
             $this->climate->to('error')->red("Installer {$this->cmd} doesn't exists.");
+
             return;
         }
 

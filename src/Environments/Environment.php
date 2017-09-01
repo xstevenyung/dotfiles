@@ -22,37 +22,37 @@ abstract class Environment
         {
             print("Running installer\n");
 
-            (new $this->installer)->run();
+            $this->installer->run();
         }
 
         if ($configurator = $this->configurator)
         {
             print("Running configurator\n");
 
-            (new $configurator)->run();
+            $this->configurator->run();
         }
 
         if ($symlinker = $this->symlinker)
         {
             print("Running symlinker\n");
 
-            (new $symlinker)->run();
+            $this->symlinker->run();
         }
     }
 
-    protected function returnIfExists($className)
-    {
-        if (class_exists($className)) {
-            return $className;
-        }
+    // protected function returnIfExists($className)
+    // {
+    //     if (class_exists($className)) {
+    //         return $className;
+    //     }
+    //
+    //     return false;
+    // }
 
-        return false;
-    }
-
-    public function __get($name)
-    {
-        $className = $this->__simple_get($name);
-
-        return $this->returnIfExists($className);
-    }
+    // public function __get($name)
+    // {
+    //     $className = $this->__simple_get($name);
+    //
+    //     return $this->returnIfExists($className);
+    // }
 }
