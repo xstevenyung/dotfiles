@@ -18,7 +18,11 @@ class Application
     {
         $this->climate = $climate;
         $this->cmd = $this->climate->arguments->get('install');
-        $this->environment = [
+    }
+
+    public function environments()
+    {
+        return [
             'atom' => Environments\Atom::class,
             'brew' => Environments\Brew::class,
             'cask' => Environments\Cask::class,
@@ -26,35 +30,30 @@ class Application
             'macos' => Environments\MacOS::class,
             'php' => Environments\PHP::class,
             'zsh' => Environments\Zsh::class,
-            // 'example' => Environments\Example::class,
-
-            // 'git' => Configurators\Git::class,
-            // 'macos' => Configurators\MacOS::class,
-            //
-            // // 'atom' => Installers\Atom::class,
-            // 'brew' => Installers\Brew::class,
-            // 'cask' => Installers\Cask::class,
-            // 'java' => Installers\Java::class,
-            // 'javascript' => Installers\Javascript::class,
-            //
-            // // 'atom' => Symlinkers\Atom::class,
-            // 'spacemacs' => Symlinkers\Spacemacs::class,
-            // // 'zsh' => Symlinkers\Zsh::class,
         ];
     }
 
-    function run()
+    public function run()
     {
-        if (!$this->cmd) {
-            $this->cmd = $this->climate->radio('Choose the environment to setup:', array_keys($this->environment))->prompt();
+        if (! $this->cmd) {
+            $this->cmd = $this->climate->radio('Choose the environment to setup:', array_keys($this->environments()))->prompt();
         }
 
-        if (!array_key_exists($this->cmd, $this->environment))
+        if (! array_key_exists($this->cmd, $this->environments()))
         {
             $this->climate->to('error')->red("Installer {$this->cmd} doesn't exists.");
             return;
         }
 
-        (new $this->environment[$this->cmd])->run();
+        $this->environment($this->cmd)->run();
+    }
+
+    private function environment($name)
+    {
+        $environments = $this->environments();
+
+        $env = $environments[$name];
+
+        return (new $env);
     }
 }
