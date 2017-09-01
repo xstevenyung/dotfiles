@@ -20,7 +20,7 @@ class Application
         $this->cmd = $this->climate->arguments->get('install');
     }
 
-    public function environments()
+    private function environments()
     {
         return [
             'atom' => Environments\Atom::class,
@@ -33,10 +33,25 @@ class Application
         ];
     }
 
+    private function choices()
+    {
+        return array_merge(['all' => '*'], $this->environments());
+    }
+
+
     public function run()
     {
         if (! $this->cmd) {
-            $this->cmd = $this->climate->radio('Choose the environment to setup:', array_keys($this->environments()))->prompt();
+            $this->cmd = $this->climate->radio('Choose the environment to setup:', array_keys($this->choices()))->prompt();
+        }
+
+        if ($this->cmd === 'all')
+        {
+            foreach ($this->environments() as $env) {
+                (new $env)->run();
+            }
+
+            return;
         }
 
         if (! array_key_exists($this->cmd, $this->environments()))
