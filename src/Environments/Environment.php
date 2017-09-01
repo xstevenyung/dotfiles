@@ -2,6 +2,7 @@
 
 namespace Dotfiles\Environments;
 
+use ReflectionClass;
 use Dotfiles\Traits\MapFunctionAsAttribute;
 
 abstract class Environment
@@ -9,12 +10,6 @@ abstract class Environment
     use MapFunctionAsAttribute {
         __get as public __simple_get;
     }
-
-    abstract protected function installer();
-
-    abstract protected function configurator();
-
-    abstract protected function symlinker();
 
     public function run()
     {
@@ -40,19 +35,41 @@ abstract class Environment
         }
     }
 
-    // protected function returnIfExists($className)
-    // {
-    //     if (class_exists($className)) {
-    //         return $className;
-    //     }
-    //
-    //     return false;
-    // }
+    protected function installer()
+    {
+        $class = '\\Dotfiles\\Installers\\' . $this->getShortName();
 
-    // public function __get($name)
-    // {
-    //     $className = $this->__simple_get($name);
-    //
-    //     return $this->returnIfExists($className);
-    // }
+        if (class_exists($class)) {
+            return (new $class);
+        }
+
+        return false;
+    }
+
+    protected function configurator()
+    {
+        $class = '\\Dotfiles\\Configurators\\' . $this->getShortName();
+
+        if (class_exists($class)) {
+            return (new $class);
+        }
+
+        return false;
+    }
+
+    protected function symlinker()
+    {
+        $class = '\\Dotfiles\\Symlinkers\\' . $this->getShortName();
+
+        if (class_exists($class)) {
+            return (new $class);
+        }
+
+        return false;
+    }
+
+    protected function getShortName()
+    {
+        return (new ReflectionClass($this))->getShortName();
+    }
 }
