@@ -2,14 +2,13 @@
 
 namespace Dotfiles\Environments;
 
-use ReflectionClass;
+use Dotfiles\Traits\GetClassName;
 use Dotfiles\Traits\MapFunctionAsAttribute;
 
 abstract class Environment
 {
-    use MapFunctionAsAttribute {
-        __get as public __simple_get;
-    }
+    use MapFunctionAsAttribute,
+        GetClassName;
 
     public function run()
     {
@@ -66,10 +65,5 @@ abstract class Environment
         }
 
         return false;
-    }
-
-    protected function getShortName()
-    {
-        return (new ReflectionClass($this))->getShortName();
     }
 }

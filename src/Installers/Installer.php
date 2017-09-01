@@ -19,7 +19,7 @@ abstract class Installer
     {
         $this->before();
 
-        $installers = self::read($this->file);
+        $installers = self::readConfig($this->file);
 
         foreach ($installers as $manager => $packages)
         {
