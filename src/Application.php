@@ -29,6 +29,7 @@ class Application
             'git' => Environments\Git::class,
             'macos' => Environments\MacOS::class,
             'php' => Environments\PHP::class,
+            'valet' => Environments\Valet::class,
             'zsh' => Environments\Zsh::class,
         ];
     }

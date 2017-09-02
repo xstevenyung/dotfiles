@@ -1,0 +1,8 @@
+installations:
+    composer-global:
+        - laravel/valet
+
+configurations:
+    - ~/.composer/vendor/bin/valet install
+
+symlinks: ~
