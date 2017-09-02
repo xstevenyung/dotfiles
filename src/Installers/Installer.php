@@ -15,6 +15,20 @@ abstract class Installer
         //
     }
 
+    protected static function cmd($manager)
+    {
+        $cmds = [
+            'brew' => 'brew install',
+            'cask' => 'brew cask install',
+            'npm-global' => 'npm install -g',
+            'apm' => 'apm install',
+            'sh' => 'sh',
+            'composer-global' => 'composer global require',
+        ];
+
+        return $cmds[$manager];
+    }
+
     public function run()
     {
         $this->before();
@@ -34,20 +48,8 @@ abstract class Installer
 
             $this->afterEachManager($manager);
         }
-    }
 
-    protected static function cmd($manager)
-    {
-        $cmds = [
-            'brew' => 'brew install',
-            'cask' => 'brew cask install',
-            'npm-global' => 'npm install -g',
-            'apm' => 'apm install',
-            'sh' => 'sh',
-            'composer-global' => 'composer global require',
-        ];
-
-        return $cmds[$manager];
+        $this->after();
     }
 
     abstract protected function file();
