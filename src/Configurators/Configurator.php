@@ -5,19 +5,15 @@ namespace Dotfiles\Configurators;
 use Dotfiles\Traits\ReadYaml;
 use Dotfiles\Traits\MapFunctionAsAttribute;
 use Dotfiles\Traits\GetClassName;
+use Dotfiles\Traits\RetrieveConfig;
 
 abstract class Configurator
 {
     use ReadYaml,
         MapFunctionAsAttribute,
-        GetClassName;
+        RetrieveConfig;
 
-    protected function file()
-    {
-        $fileName = strtolower($this->getShortName());
-
-        return "configurators/{$fileName}.yml";
-    }
+    private $dir = 'configurators';
 
     public function run()
     {
