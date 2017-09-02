@@ -13,11 +13,11 @@ abstract class Configurator
         MapFunctionAsAttribute,
         RetrieveConfig;
 
-    private $dir = 'configurators';
+    private $attribute = 'configurations';
 
     public function run()
     {
-        $cmds = self::readConfig($this->file);
+        $cmds = self::readConfig($this->file, $this->attribute);
 
         foreach ($cmds as $cmd) {
             exec($cmd);

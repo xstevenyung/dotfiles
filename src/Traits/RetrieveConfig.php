@@ -10,6 +10,6 @@ trait RetrieveConfig
     {
         $fileName = strtolower($this->getShortName());
 
-        return "{$this->dir}/{$fileName}.yml";
+        return "{$fileName}.yml";
     }
 }
