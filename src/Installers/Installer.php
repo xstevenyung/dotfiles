@@ -12,7 +12,7 @@ abstract class Installer
         MapFunctionAsAttribute,
         RetrieveConfig;
 
-    private $dir = 'installers';
+    private $attribute = 'installations';
 
     protected function before()
     {
@@ -37,7 +37,7 @@ abstract class Installer
     {
         $this->before();
 
-        $installers = self::readConfig($this->file);
+        $installers = self::readConfig($this->file, $this->attribute);
 
         foreach ($installers as $manager => $packages)
         {
