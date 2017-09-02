@@ -32,6 +32,13 @@ abstract class Environment
 
             $this->symlinker->run();
         }
+
+        $this->after();
+    }
+
+    protected function after()
+    {
+        //
     }
 
     protected function installer()
