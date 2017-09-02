@@ -9,11 +9,6 @@ class PHP extends Installer
         $this->unlinkAll();
     }
 
-    protected function file()
-    {
-        return 'installers/php.yml';
-    }
-
     protected function afterEach($package)
     {
         $this->unlinkAll();

@@ -3,12 +3,16 @@
 namespace Dotfiles\Installers;
 
 use Dotfiles\Traits\ReadYaml;
+use Dotfiles\Traits\RetrieveConfig;
 use Dotfiles\Traits\MapFunctionAsAttribute;
 
 abstract class Installer
 {
     use ReadYaml,
-        MapFunctionAsAttribute;
+        MapFunctionAsAttribute,
+        RetrieveConfig;
+
+    private $dir = 'installers';
 
     protected function before()
     {
@@ -51,8 +55,6 @@ abstract class Installer
 
         $this->after();
     }
-
-    abstract protected function file();
 
     protected function afterEach($package)
     {

@@ -12,5 +12,4 @@ trait RetrieveConfig
 
         return "{$this->dir}/{$fileName}.yml";
     }
-
 }
