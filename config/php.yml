@@ -1,0 +1,15 @@
+installations:
+    brew:
+        - homebrew/php/php54
+        - homebrew/php/php55
+        - homebrew/php/php56
+        - homebrew/php/php70
+        - homebrew/php/php71
+        - homebrew/php/composer
+    composer-global:
+        - laravel/installer
+        - laravel/envoy
+
+configurations: ~
+
+symlinks: ~

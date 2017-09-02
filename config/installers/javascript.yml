@@ -1,7 +1,0 @@
-brew:
-    - npm
-    - yarn
-
-npm-global:
-    - gulp-cli
-    - vue-cli

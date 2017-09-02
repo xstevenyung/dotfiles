@@ -1,0 +1,9 @@
+installations:
+    brew:
+        - java
+        - intellij-idea
+        - sts
+
+configurations: ~
+
+symlinks: ~

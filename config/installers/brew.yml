@@ -1,4 +1,0 @@
-brew:
-    - mysql
-    - tmux
-    - the_silver_searcher
