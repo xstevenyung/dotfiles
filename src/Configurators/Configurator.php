@@ -2,14 +2,14 @@
 
 namespace Dotfiles\Configurators;
 
-use Dotfiles\Traits\ReadYaml;
+use Dotfiles\Traits\InteractWithYaml;
 use Dotfiles\Traits\MapFunctionAsAttribute;
 use Dotfiles\Traits\GetClassName;
 use Dotfiles\Traits\RetrieveConfig;
 
 abstract class Configurator
 {
-    use ReadYaml,
+    use InteractWithYaml,
         MapFunctionAsAttribute,
         RetrieveConfig;
 

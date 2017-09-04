@@ -4,7 +4,7 @@ namespace Dotfiles\Traits;
 
 use Symfony\Component\Yaml\Yaml;
 
-trait ReadYaml
+trait InteractWithYaml
 {
     public static function read($file)
     {
@@ -22,5 +22,14 @@ trait ReadYaml
         }
 
         return $configs;
+    }
+
+    public static function writeConfig($file, $configs)
+    {
+        $file = config_path($file);
+
+        $yaml = Yaml::dump($configs);
+
+        file_put_contents($file, $yaml);
     }
 }

@@ -2,13 +2,13 @@
 
 namespace Dotfiles\Installers;
 
-use Dotfiles\Traits\ReadYaml;
+use Dotfiles\Traits\InteractWithYaml;
 use Dotfiles\Traits\RetrieveConfig;
 use Dotfiles\Traits\MapFunctionAsAttribute;
 
 abstract class Installer
 {
-    use ReadYaml,
+    use InteractWithYaml,
         MapFunctionAsAttribute,
         RetrieveConfig;
 
