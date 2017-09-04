@@ -13,12 +13,14 @@ trait InteractWithYaml
         return Yaml::parse($file);
     }
 
-    public static function readConfig($file, $attribute = null)
+    public static function readConfig($file, $attribute = null, $default = null)
     {
         $configs = self::read(config_path($file));
 
         if ($attribute) {
-            return $configs[$attribute];
+            return array_key_exists($attribute, $configs)
+                ? $configs[$attribute]
+                : $default;
         }
 
         return $configs;
