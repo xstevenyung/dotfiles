@@ -47,9 +47,9 @@ class SetupCommand extends Command
             return;
         }
 
-        if ('*' === $environment) {
-            foreach ($this->environments() as $environment) {
-                $environment->run();
+        if ('all' === $environment) {
+            foreach ($this->environments() as $env) {
+                (new $env)->run();
             }
 
             return;
