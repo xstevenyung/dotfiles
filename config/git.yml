@@ -7,4 +7,4 @@ configurations:
     # Setup vi as default editor
     - git config --global core.editor vi
 
-symlinks: ~
+symlinks: ~
