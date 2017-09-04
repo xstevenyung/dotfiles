@@ -1,3 +1,5 @@
+is_active: false
+
 installations:
     brew:
         - java
