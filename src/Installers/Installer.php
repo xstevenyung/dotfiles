@@ -56,6 +56,15 @@ abstract class Installer
         $this->after();
     }
 
+    public function add($manager, $package)
+    {
+        $configs = self::readConfig($this->file);
+
+        $configs['installations'][$manager][] = $package;
+
+        self::writeConfig($this->file, $configs);
+    }
+
     protected function afterEach($package)
     {
         //

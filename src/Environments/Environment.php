@@ -36,6 +36,11 @@ abstract class Environment
         $this->after();
     }
 
+    public function addPackage($manager, $package)
+    {
+        $this->installer->add($manager, $package);
+    }
+
     protected function after()
     {
         //
