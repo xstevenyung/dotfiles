@@ -13,16 +13,7 @@ class SetupCommand extends Command
 {
     private function environments()
     {
-        return [
-            'atom' => Environments\Atom::class,
-            'brew' => Environments\Brew::class,
-            'cask' => Environments\Cask::class,
-            'git' => Environments\Git::class,
-            'macos' => Environments\MacOS::class,
-            'php' => Environments\PHP::class,
-            'valet' => Environments\Valet::class,
-            'zsh' => Environments\Zsh::class,
-        ];
+        return include(config_path('environments.php'));
     }
 
     protected function configure()
