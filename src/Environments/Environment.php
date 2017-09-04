@@ -2,17 +2,19 @@
 
 namespace Dotfiles\Environments;
 
-use Dotfiles\Traits\GetClassName;
+use Dotfiles\Traits\RetrieveConfig;
 use Dotfiles\Traits\MapFunctionAsAttribute;
+use Dotfiles\Traits\InteractWithYaml;
 
 abstract class Environment
 {
     use MapFunctionAsAttribute,
-        GetClassName;
+        RetrieveConfig,
+        InteractWithYaml;
 
     public function isActive()
     {
-        return true;
+        return self::readConfig($this->file, 'is_active', true);
     }
 
     public function run()
