@@ -2,7 +2,6 @@
 
 namespace Dotfiles\Commands;
 
-use Exception;
 use Dotfiles\Environments;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Style\SymfonyStyle;
