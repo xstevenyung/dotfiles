@@ -3,6 +3,7 @@
 namespace Dotfiles\Commands;
 
 use Dotfiles\Environments;
+use Dotfiles\Traits\InteractWithEnvironments;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Console\Input\InputArgument;
@@ -11,10 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SetupCommand extends Command
 {
-    private function environments()
-    {
-        return include(config_path('environments.php'));
-    }
+    use InteractWithEnvironments;
 
     protected function configure()
     {
@@ -50,14 +48,5 @@ class SetupCommand extends Command
         }
 
         $io->error("Environment not found: {$environment}");
-    }
-
-    private function environment($name)
-    {
-        $environments = $this->environments();
-
-        $env = $environments[$name];
-
-        return (new $env);
     }
 }
