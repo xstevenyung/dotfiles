@@ -6,7 +6,7 @@ class Atom extends Symlinker
 {
     protected function file()
     {
-        return config_path('symlinks/atom.symlink');
+        return resources_path('symlinks/atom.symlink');
     }
 
     protected function destination()

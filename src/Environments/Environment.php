@@ -14,7 +14,7 @@ abstract class Environment
 
     public function isActive()
     {
-        return self::readConfig($this->file, 'is_active', true);
+        return self::readResources($this->file, 'is_active', true);
     }
 
     public function run()

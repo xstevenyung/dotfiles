@@ -30,7 +30,7 @@ abstract class Installer
     {
         $this->before();
 
-        $installers = self::readConfig($this->file, $this->attribute);
+        $installers = self::readResources($this->file, $this->attribute);
 
         foreach ($installers as $manager => $packages)
         {
@@ -51,11 +51,11 @@ abstract class Installer
 
     public function add($manager, $package)
     {
-        $configs = self::readConfig($this->file);
+        $configs = self::readResources($this->file);
 
         $configs['installations'][$manager][] = $package;
 
-        self::writeConfig($this->file, $configs);
+        self::writeResources($this->file, $configs);
     }
 
     protected function afterEach($package)

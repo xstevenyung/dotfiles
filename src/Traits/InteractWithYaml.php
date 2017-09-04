@@ -13,9 +13,9 @@ trait InteractWithYaml
         return Yaml::parse($file);
     }
 
-    public static function readConfig($file, $attribute = null, $default = null)
+    public static function readResources($file, $attribute = null, $default = null)
     {
-        $configs = self::read(config_path($file));
+        $configs = self::read(resources_path($file));
 
         if ($attribute) {
             return array_key_exists($attribute, $configs)
@@ -26,9 +26,9 @@ trait InteractWithYaml
         return $configs;
     }
 
-    public static function writeConfig($file, $configs)
+    public static function writeResources($file, $configs)
     {
-        $file = config_path($file);
+        $file = resources_path($file);
 
         $yaml = Yaml::dump($configs);
 

@@ -25,3 +25,11 @@ if (! function_exists('config_path'))
         return base_path('config') . '/' . $path;
     }
 }
+
+if (! function_exists('resources_path'))
+{
+    function resources_path($path = '')
+    {
+        return base_path('resources') . '/' . $path;
+    }
+}

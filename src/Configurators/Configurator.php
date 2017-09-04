@@ -17,7 +17,7 @@ abstract class Configurator
 
     public function run()
     {
-        $cmds = self::readConfig($this->file, $this->attribute);
+        $cmds = self::readResources($this->file, $this->attribute);
 
         foreach ($cmds as $cmd) {
             exec($cmd);
