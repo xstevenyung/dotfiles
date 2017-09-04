@@ -1,12 +1,13 @@
 <?php
 
 return [
-    'atom' => Dotfiles\Environments\Atom::class,
-    'brew' => Dotfiles\Environments\Brew::class,
-    'cask' => Dotfiles\Environments\Cask::class,
-    'git' => Dotfiles\Environments\Git::class,
     'macos' => Dotfiles\Environments\MacOS::class,
+    'git' => Dotfiles\Environments\Git::class,
+    'zsh' => Dotfiles\Environments\Zsh::class,
+    'javascript' => Dotfiles\Environments\Javascript::class,
+    'atom' => Dotfiles\Environments\Atom::class,
     'php' => Dotfiles\Environments\PHP::class,
     'valet' => Dotfiles\Environments\Valet::class,
-    'zsh' => Dotfiles\Environments\Zsh::class,
+    'brew' => Dotfiles\Environments\Brew::class,
+    'cask' => Dotfiles\Environments\Cask::class,
 ];
