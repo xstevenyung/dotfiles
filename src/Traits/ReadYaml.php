@@ -13,10 +13,14 @@ trait ReadYaml
         return Yaml::parse($file);
     }
 
-    public static function readConfig($file, $attribute)
+    public static function readConfig($file, $attribute = null)
     {
         $configs = self::read(config_path($file));
 
-        return $configs[$attribute];
+        if ($attribute) {
+            return $configs[$attribute];
+        }
+
+        return $configs;
     }
 }
