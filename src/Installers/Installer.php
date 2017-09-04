@@ -21,14 +21,7 @@ abstract class Installer
 
     protected static function cmd($manager)
     {
-        $cmds = [
-            'brew' => 'brew install',
-            'cask' => 'brew cask install',
-            'npm-global' => 'npm install -g',
-            'apm' => 'apm install',
-            'sh' => 'sh',
-            'composer-global' => 'composer global require',
-        ];
+        $cmds = include(config_path('install-commands.php'));
 
         return $cmds[$manager];
     }
