@@ -22,4 +22,11 @@ trait InteractWithEnvironments
     {
         return in_array($name, array_keys($this->environments()));
     }
+
+    private function activeEnvironments()
+    {
+        return array_filter($this->environments(), function ($environment) {
+            return (new $environment)->isActive();
+        });
+    }
 }

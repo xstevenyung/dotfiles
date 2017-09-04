@@ -37,7 +37,7 @@ class SetupCommand extends Command
 
         if ('all' === $environment)
         {
-            foreach ($this->environments() as $key => $env)
+            foreach ($this->activeEnvironments() as $key => $env)
             {
                 $io->section("Setting {$key}");
 

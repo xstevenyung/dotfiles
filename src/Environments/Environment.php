@@ -10,6 +10,11 @@ abstract class Environment
     use MapFunctionAsAttribute,
         GetClassName;
 
+    public function isActive()
+    {
+        return true;
+    }
+
     public function run()
     {
         if ($this->installer)
