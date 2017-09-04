@@ -28,7 +28,7 @@ class SetupCommand extends Command
 
         $environment = $input->getArgument('environment');
 
-        if (in_array($environment, array_keys($this->environments())))
+        if ($this->environmentExists($environment))
         {
             $this->environment($environment)->run();
 

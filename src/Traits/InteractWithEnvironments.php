@@ -17,4 +17,9 @@ trait InteractWithEnvironments
 
         return (new $env);
     }
+
+    private function environmentExists($name)
+    {
+        return in_array($name, array_keys($this->environments()));
+    }
 }
