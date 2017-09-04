@@ -3,20 +3,11 @@
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-use Dotfiles\Application;
-use League\CLImate\CLImate;
+use Symfony\Component\Console\Application;
+use Dotfiles\Commands\SetupCommand;
 
-$climate = new CLImate;
+$app = new Application;
 
-$climate->out('Welcome to the dotfiles.');
+$app->add(new SetupCommand);
 
-$climate->arguments->add([
-    'install' => [
-        'description' => 'Installation to execute',
-    ],
-]);
-
-$climate->arguments->parse();
-
-$app = new Application($climate);
 $app->run();
