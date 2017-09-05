@@ -51,11 +51,11 @@ abstract class Installer
 
     public function add($manager, $package)
     {
-        $configs = self::readResources($this->file);
+        $resources = self::readResources($this->file);
 
-        $configs['installations'][$manager][] = $package;
+        $resources[$this->attribute][$manager][] = $package;
 
-        self::writeResources($this->file, $configs);
+        self::writeResources($this->file, $resources);
     }
 
     protected function afterEach($package)
