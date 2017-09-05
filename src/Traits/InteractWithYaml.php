@@ -15,23 +15,29 @@ trait InteractWithYaml
 
     public static function readResources($file, $attribute = null, $default = null)
     {
-        $configs = self::read(resources_path($file));
+        $resources = self::read(resources_path($file));
 
-        if ($attribute) {
-            return array_key_exists($attribute, $configs)
-                ? $configs[$attribute]
+        if ($attribute)
+        {
+            return array_key_exists($attribute, $resources)
+                ? $resources[$attribute]
                 : $default;
         }
 
-        return $configs;
+        return $resources;
     }
 
-    public static function writeResources($file, $configs)
+    public static function write($file, $data)
+    {
+        $yaml = Yaml::dump($data);
+
+        file_put_contents($file, $yaml);
+    }
+
+    public static function writeResources($file, $resources)
     {
         $file = resources_path($file);
 
-        $yaml = Yaml::dump($configs);
-
-        file_put_contents($file, $yaml);
+        self::write($file, $resources);
     }
 }
