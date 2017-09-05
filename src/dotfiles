@@ -7,11 +7,13 @@ use Symfony\Component\Console\Application;
 use Dotfiles\Commands\SetupCommand;
 use Dotfiles\Commands\AddInstallationCommand;
 use Dotfiles\Commands\AddConfigurationCommand;
+use Dotfiles\Commands\EditCommand;
 
 $app = new Application;
 
 $app->add(new SetupCommand);
 $app->add(new AddInstallationCommand);
 $app->add(new AddConfigurationCommand);
+$app->add(new EditCommand);
 
 $app->run();
