@@ -27,17 +27,17 @@ class AddInstallationCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
 
-        $environment = $input->getArgument('environment');
+        $environmentName = $input->getArgument('environment');
         $manager = $input->getArgument('manager');
         $package = $input->getArgument('package');
 
-        if ($this->environmentExists($environment))
+        if ($environment = $this->environment($environmentName))
         {
-            $this->environment($environment)->addPackage($manager, $package);
+            $environment->addPackage($manager, $package);
 
             return;
         }
 
-        $io->error("Environment not found: {$environment}");
+        $io->error("Environment not found: {$environmentName}");
     }
 }

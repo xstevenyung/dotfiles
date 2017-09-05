@@ -6,10 +6,12 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 use Symfony\Component\Console\Application;
 use Dotfiles\Commands\SetupCommand;
 use Dotfiles\Commands\AddInstallationCommand;
+use Dotfiles\Commands\AddConfigurationCommand;
 
 $app = new Application;
 
 $app->add(new SetupCommand);
 $app->add(new AddInstallationCommand);
+$app->add(new AddConfigurationCommand);
 
 $app->run();
