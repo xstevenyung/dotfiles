@@ -2,6 +2,7 @@
 
 namespace Dotfiles\Environments;
 
+use Exception;
 use Dotfiles\Traits\RetrieveConfig;
 use Dotfiles\Traits\MapFunctionAsAttribute;
 use Dotfiles\Traits\InteractWithYaml;
@@ -26,14 +27,14 @@ abstract class Environment
             $this->installer->run();
         }
 
-        if ($configurator = $this->configurator)
+        if ($this->configurator)
         {
             print("Running configurator\n");
 
             $this->configurator->run();
         }
 
-        if ($symlinker = $this->symlinker)
+        if ($this->symlinker)
         {
             print("Running symlinker\n");
 
@@ -45,7 +46,25 @@ abstract class Environment
 
     public function addPackage($manager, $package)
     {
-        $this->installer->add($manager, $package);
+        if ($this->installer) {
+            return $this->installer->add($manager, $package);
+        }
+
+        $name = $this->getShortName();
+
+        throw new Exception("Installer doesn't exists for {$name}");
+
+    }
+
+    public function addConfiguration($configuration)
+    {
+        if ($this->configurator) {
+            return $this->configurator->add($configuration);
+        }
+
+        $name = $this->getShortName();
+
+        throw new Exception("Configurator doesn't exists for {$name}");
     }
 
     protected function after()
