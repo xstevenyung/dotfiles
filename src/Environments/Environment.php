@@ -53,7 +53,6 @@ abstract class Environment
         $name = $this->getShortName();
 
         throw new Exception("Installer doesn't exists for {$name}");
-
     }
 
     public function addConfiguration($configuration)
