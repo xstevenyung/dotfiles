@@ -13,6 +13,10 @@ trait InteractWithEnvironments
     {
         $environments = $this->environments();
 
+        if (! array_key_exists($name, $environments)) {
+            return false;
+        }
+
         $env = $environments[$name];
 
         return (new $env);
