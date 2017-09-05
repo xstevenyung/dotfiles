@@ -23,4 +23,15 @@ abstract class Configurator
             exec($cmd);
         }
     }
+
+    public function add($configuration)
+    {
+        $resources = self::readResources($this->file);
+
+        $resources[$this->attribute][] = $configuration;
+
+        self::writeResources($this->file, $resources);
+
+        return true;
+    }
 }
