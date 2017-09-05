@@ -11,20 +11,18 @@ trait InteractWithEnvironments
 
     private function environment($name)
     {
-        $environments = $this->environments();
-
-        if (! array_key_exists($name, $environments)) {
+        if (! $this->environmentExists($name)) {
             return false;
         }
 
-        $env = $environments[$name];
+        $env = $this->environments()[$name];
 
         return (new $env);
     }
 
     private function environmentExists($name)
     {
-        return in_array($name, array_keys($this->environments()));
+        return array_key_exists($name, $this->environments());
     }
 
     private function activeEnvironments()
