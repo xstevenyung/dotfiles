@@ -1,35 +1,4 @@
 installations:
-    cask:
-        # Productivity
-        - evernote
-        - webcatalog
-
-        # Utility
-        - flux
-        - avast-mac-security
-
-        # Communication
-        - slack
-        - gitter
-        - discord
-        - teamviewer
-        - skype
-
-        # Browser
-        - google-chrome
-        - firefox
-
-        # Dev Tools
-        - sourcetree
-        - sequel-pro
-        - dash
-        - zeplin
-        - postman
-
-        # Entertainment
-        - vlc
-        - spotify
-
-configurations: ~
-
-symlinks: ~
+    cask: [evernote, webcatalog, flux, avast-mac-security, slack, gitter, discord, teamviewer, skype, google-chrome, firefox, sourcetree, sequel-pro, dash, zeplin, postman, vlc, spotify, recordit]
+configurations: null
+symlinks: null
