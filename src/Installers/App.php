@@ -2,6 +2,6 @@
 
 namespace Dotfiles\Installers;
 
-class Cask extends Installer
+class App extends Installer
 {
 }

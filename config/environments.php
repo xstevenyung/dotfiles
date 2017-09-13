@@ -9,5 +9,5 @@ return [
     'php' => Dotfiles\Environments\PHP::class,
     'valet' => Dotfiles\Environments\Valet::class,
     'cli' => Dotfiles\Environments\CLI::class,
-    'cask' => Dotfiles\Environments\Cask::class,
+    'app' => Dotfiles\Environments\App::class,
 ];

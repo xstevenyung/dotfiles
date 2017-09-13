@@ -2,6 +2,6 @@
 
 namespace Dotfiles\Environments;
 
-class Cask extends Environment
+class App extends Environment
 {
 }
