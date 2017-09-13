@@ -1,9 +1,4 @@
 installations:
-    brew:
-        - mysql
-        - tmux
-        - the_silver_searcher
-
-configurations: ~
-
-symlinks: ~
+    brew: [mysql, tmux, the_silver_searcher, tig]
+configurations: null
+symlinks: null
