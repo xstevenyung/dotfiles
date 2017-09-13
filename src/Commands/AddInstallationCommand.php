@@ -35,6 +35,8 @@ class AddInstallationCommand extends Command
         {
             $environment->addPackage($manager, $package);
 
+            $environment->run();
+
             return;
         }
 
