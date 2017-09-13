@@ -2,6 +2,6 @@
 
 namespace Dotfiles\Installers;
 
-class Brew extends Installer
+class CLI extends Installer
 {
 }

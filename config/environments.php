@@ -8,6 +8,6 @@ return [
     'atom' => Dotfiles\Environments\Atom::class,
     'php' => Dotfiles\Environments\PHP::class,
     'valet' => Dotfiles\Environments\Valet::class,
-    'brew' => Dotfiles\Environments\Brew::class,
+    'cli' => Dotfiles\Environments\CLI::class,
     'cask' => Dotfiles\Environments\Cask::class,
 ];

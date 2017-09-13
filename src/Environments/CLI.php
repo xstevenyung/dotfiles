@@ -2,6 +2,6 @@
 
 namespace Dotfiles\Environments;
 
-class Brew extends Environment
+class CLI extends Environment
 {
 }
