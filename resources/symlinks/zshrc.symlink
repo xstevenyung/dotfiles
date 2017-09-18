@@ -93,7 +93,8 @@ alias art="php artisan"
 # Git
 alias gs="git status"
 alias gc="git commit"
-alias gl="git log"
+# Link: https://coderwall.com/p/euwpig/a-better-git-log
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gp="git push"
 alias gu="git pull"
 alias gpp="git pull;git push"
