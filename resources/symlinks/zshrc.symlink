@@ -84,9 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# PHP
-alias phpunit="./vendor/bin/phpunit"
-
 # Laravel aliases
 alias art="php artisan"
 
