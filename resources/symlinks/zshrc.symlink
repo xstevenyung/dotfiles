@@ -90,6 +90,9 @@ alias phpunit="./vendor/bin/phpunit"
 # Laravel aliases
 alias art="php artisan"
 
+# Symfony aliases
+alias cons="php bin/console"
+
 # Git
 alias gs="git status"
 alias gc="git commit"
