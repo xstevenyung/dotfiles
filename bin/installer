@@ -2,9 +2,10 @@
 <?php
 
 define('DOTFILES_PATH', '~/Code/dotfiles');
+define('BIN_PATH', '~/bin/');
 
 exec('git clone https://github.com/stvnyung/dotfiles ' . DOTFILES_PATH);
-exec('ln -fs ' . DOTFILES_PATH .'/src/dotfiles /usr/local/bin/');
+exec('ln -fs ' . DOTFILES_PATH . '/src/dotfiles ' . BIN_PATH);
 
 /* Install Homebrew */
 exec('/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"');
