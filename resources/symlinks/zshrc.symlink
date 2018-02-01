@@ -98,3 +98,4 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gp="git push"
 alias gu="git pull"
 alias gpp="git pull;git push"
+alias gd="git diff --word-diff"
