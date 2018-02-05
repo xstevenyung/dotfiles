@@ -3,6 +3,10 @@
 # PHP
 brew install homebrew/php/composer
 
+# Javascript
+brew install node
+brew install yarn
+
 # Dev
 brew install tig
 brew install tldr
