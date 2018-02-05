@@ -1,14 +1,10 @@
-#!/usr/bin/env php
-<?php
+#!/usr/bin/env bash
 
-define('CODE_PATH', '~/Code');
-define('DOTFILES_PATH', CODE_PATH . '/dotfiles');
+# Pull dotfiles repository
+mkdir ~/Code
+git clone https://github.com/stvnyung/dotfiles ~/Code/dotfiles
 
-exec('mkdir ' . CODE_PATH);
-exec('git clone https://github.com/stvnyung/dotfiles ' . DOTFILES_PATH);
-exec('ln -fs ' . DOTFILES_PATH .'/src/dotfiles /usr/local/bin/');
-
-/* Install Homebrew */
-exec('/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"');
-exec('brew doctor');
-exec('brew update');
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
+brew update
