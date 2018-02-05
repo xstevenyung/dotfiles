@@ -41,3 +41,8 @@ open https://goo.gl/6fMg2D # Redirect to a link enable switch between windows
 git config --global user.name "Steven Yung"
 git config --global user.email stevenyung@icloud.com
 git config --global core.editor vi # Setup vi as default editor
+
+# Upgrade
+brew upgrade
+brew cask upgrade
+mas upgrade
