@@ -84,17 +84,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Laravel aliases
+################################################################################
+# Alias
+################################################################################
+# Laravel
 alias art="php artisan"
-
-# Symfony aliases
+# Symfony
 alias cons="php bin/console"
-
 # Git
 alias gs="git status"
 alias gc="git commit"
-# Link: https://coderwall.com/p/euwpig/a-better-git-log
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" # Link: https://coderwall.com/p/euwpig/a-better-git-log
 alias gp="git push"
 alias gu="git pull"
-alias gpp="git pull;git push"
