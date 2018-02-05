@@ -4,7 +4,6 @@
 brew install homebrew/php/composer
 
 # Dev
-brew install zsh; chsh -s $(which zsh)
 brew install tmux
 brew install mysql
 brew install tig
@@ -19,7 +18,11 @@ brew cask install firefox
 brew cask install spotify
 brew cask install evernote
 brew cask install google-chrome
-brew cask install avast-mac-security
+brew cask install avast-security
+
+# Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+chsh -s $(which zsh)
 
 # Setup MacOS Dock
 defaults write com.apple.dock static-only -bool TRUE # Only show active apps
