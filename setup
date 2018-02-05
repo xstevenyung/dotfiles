@@ -23,6 +23,7 @@ brew cask install avast-security
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s $(which zsh)
+ln -fs ~/Code/dotfiles/zshrc.symlink ~/.zshrc
 
 # Setup MacOS Dock
 defaults write com.apple.dock static-only -bool TRUE # Only show active apps
