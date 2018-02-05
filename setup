@@ -45,3 +45,8 @@ git config --global core.editor vi # Setup vi as default editor
 brew upgrade
 brew cask upgrade
 mas upgrade
+
+# Generate SSH key
+if [ ! -f ~/.ssh/id_rsa.pub ]; then
+    ssh-keygen -t rsa -C "stevenyung@icloud.com" -b 4096
+fi
