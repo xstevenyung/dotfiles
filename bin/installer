@@ -1,8 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-define('DOTFILES_PATH', '~/Code/dotfiles');
+define('CODE_PATH', '~/Code');
+define('DOTFILES_PATH', CODE_PATH . '/dotfiles');
 
+exec('mkdir ' . CODE_PATH);
 exec('git clone https://github.com/stvnyung/dotfiles ' . DOTFILES_PATH);
 exec('ln -fs ' . DOTFILES_PATH .'/src/dotfiles /usr/local/bin/');
 
