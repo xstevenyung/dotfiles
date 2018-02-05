@@ -97,3 +97,5 @@ alias gc="git commit"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" # Link: https://coderwall.com/p/euwpig/a-better-git-log
 alias gp="git push"
 alias gu="git pull"
+# Dotfiles
+alias dedit="code ~/Code/dotfiles"
