@@ -9,10 +9,12 @@ fi
 
 # PHP
 brew install homebrew/php/composer
-# Valet
-composer global require laravel/valet
-valet install
-valet park ~/Code
+if [ ! -f .first ]; then
+    # Valet
+    composer global require laravel/valet
+    valet install
+    valet park ~/Code
+fi
 
 # Javascript
 brew install node
