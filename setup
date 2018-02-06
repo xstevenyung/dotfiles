@@ -58,9 +58,13 @@ if [ ! -f .first ]; then
 fi
 
 # Upgrade
+brew update
 brew upgrade
+brew cask update
 brew cask upgrade
 mas upgrade
+composer global upgrade
+yarn global upgrade
 
 # Generate SSH key
 if [ ! -f ~/.ssh/id_rsa.pub ]; then
