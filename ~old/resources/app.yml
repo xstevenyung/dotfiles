@@ -1,4 +1,0 @@
-installations:
-    cask: [evernote, webcatalog, flux, avast-mac-security, slack, gitter, discord, teamviewer, skype, google-chrome, firefox, sequel-pro, dash, zeplin, postman, vlc, spotify, recordit]
-configurations: null
-symlinks: null
