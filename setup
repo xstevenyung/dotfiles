@@ -17,6 +17,7 @@ valet park ~/Code
 # Javascript
 brew install node
 brew install yarn
+yarn global add gulp-cli
 
 # Dev
 brew install tig
