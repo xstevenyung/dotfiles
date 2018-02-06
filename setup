@@ -23,6 +23,7 @@ yarn global add gulp-cli
 brew install tig
 brew install tldr
 brew install mysql
+brew install git-flow-avh
 brew cask install sequel-pro
 brew cask install visual-studio-code
 
