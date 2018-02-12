@@ -62,14 +62,7 @@ if [ ! -f .first ]; then
     git config --global core.editor vi # Setup vi as default editor
 fi
 
-# Upgrade
-brew update
-brew upgrade
-brew cask update
-brew cask upgrade
-mas upgrade
-composer global upgrade
-yarn global upgrade
+./upgrade # Upgrade
 
 # Generate SSH key
 if [ ! -f ~/.ssh/id_rsa.pub ]; then

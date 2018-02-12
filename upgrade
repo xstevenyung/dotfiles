@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+brew update
+brew upgrade
+brew cask update
+brew cask upgrade
+mas upgrade
+composer global upgrade
+yarn global upgrade
