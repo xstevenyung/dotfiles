@@ -20,6 +20,9 @@ fi
 brew install node
 brew install yarn
 yarn global add gulp-cli
+# Tiny Care Terminal
+npm install -g tiny-care-terminal
+npm install -g git-standup
 
 # Dev
 brew install tig
