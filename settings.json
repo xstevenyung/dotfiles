@@ -1,0 +1,25 @@
+{
+    "workbench.statusBar.visible": false,
+    "explorer.openEditors.visible": 0,
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        80
+    ],
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "trailing-spaces.trimOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 26,
+    "terminal.integrated.lineHeight": 1.5
+}
