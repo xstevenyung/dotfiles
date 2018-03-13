@@ -42,6 +42,7 @@ code --install-extension octref.vetur
 code --install-extension onecentlin.laravel-blade
 code --install-extension shardulm94.trailing-spaces
 code --install-extension vscodevim.vim
+code --install-extension monokai.theme-monokai-pro-vscode
 
 # General
 brew cask install vlc
@@ -54,6 +55,7 @@ brew cask install evernote
 brew cask install transmission
 brew cask install google-chrome
 brew cask install avast-security
+brew cask install recordit
 
 # Install App Store apps
 brew install mas
