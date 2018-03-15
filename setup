@@ -9,6 +9,7 @@ fi
 
 # PHP
 brew install homebrew/php/composer
+brew install homebrew/php/php71-xdebug
 if [ ! -f .first ]; then
     # Valet
     composer global require laravel/valet
