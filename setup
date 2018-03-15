@@ -55,7 +55,7 @@ brew cask install evernote
 brew cask install transmission
 brew cask install google-chrome
 brew cask install avast-security
-brew cask install recordit
+brew cask install kap
 
 # Install App Store apps
 brew install mas
