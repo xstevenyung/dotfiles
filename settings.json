@@ -21,5 +21,8 @@
     "editor.wordWrap": "on",
     "editor.fontSize": 14,
     "editor.lineHeight": 26,
-    "terminal.integrated.lineHeight": 1.5
+    "terminal.integrated.lineHeight": 1.5,
+    "gitlens.keymap": "alternate",
+    "workbench.colorTheme": "One Monokai",
+    "workbench.iconTheme": "Monokai Pro Icons"
 }
