@@ -35,6 +35,7 @@ brew cask install sequel-pro
 brew cask install postman
 # Visual Studio Code
 brew cask install visual-studio-code
+code --install-extension ms-vscode.atom-keybindings
 code --install-extension bmewburn.vscode-intelephense-client
 code --install-extension eamodio.gitlens
 code --install-extension felixfbecker.php-debug
