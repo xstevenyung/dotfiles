@@ -24,6 +24,7 @@ yarn global add gulp-cli
 # Tiny Care Terminal
 npm install -g tiny-care-terminal
 npm install -g git-standup
+yarn global add vue-cli
 
 # Dev
 brew install tig
