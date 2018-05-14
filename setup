@@ -30,7 +30,6 @@ yarn global add vue-cli
 brew install tig
 brew install tldr
 brew install mysql
-brew cask install dash
 brew cask install zeplin
 brew install git-flow-avh
 brew cask install sequel-pro
