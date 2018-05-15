@@ -16,6 +16,7 @@ if [ ! -f .first ]; then
     valet install
     valet park ~/Code
 fi
+composer global require spatie/phpunit-watcher
 
 # Javascript
 brew install node
