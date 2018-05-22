@@ -20,6 +20,7 @@ composer global require spatie/phpunit-watcher
 
 # Javascript
 brew install node
+brew install node@8
 brew install yarn
 yarn global add gulp-cli
 # Tiny Care Terminal
