@@ -1,0 +1,11 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.quickOpenNavigateNext"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.showAllEditors"
+    }
+]

@@ -24,5 +24,9 @@
     "terminal.integrated.lineHeight": 1.5,
     "gitlens.keymap": "alternate",
     "workbench.colorTheme": "One Monokai",
-    "workbench.iconTheme": "Monokai Pro Icons"
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "window.zoomLevel": 0,
 }
