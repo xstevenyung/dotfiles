@@ -3,5 +3,5 @@
 ## Installation
 
 ``` bash
-curl https://raw.githubusercontent.com/stvnyung/dotfiles/master/bin/installer|bash
+curl https://raw.githubusercontent.com/stvnyung/dotfiles/master/installer|bash
 ```
