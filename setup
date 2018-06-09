@@ -8,8 +8,10 @@ if [ ! -f .first ]; then
 fi
 
 # PHP
-brew install homebrew/php/composer
-brew install homebrew/php/php71-xdebug
+brew install composer
+brew install autoconf
+pecl install xdebug
+pecl install imagick
 if [ ! -f .first ]; then
     # Valet
     composer global require laravel/valet
