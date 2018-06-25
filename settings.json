@@ -7,14 +7,8 @@
         80
     ],
     "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
+        "suppressShowKeyBindingsNotice": true,
         "suppressResultsExplorerNotice": true,
-        "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
     "trailing-spaces.trimOnSave": true,
@@ -22,11 +16,13 @@
     "editor.fontSize": 14,
     "editor.lineHeight": 26,
     "terminal.integrated.lineHeight": 1.5,
-    "gitlens.keymap": "alternate",
     "workbench.colorTheme": "One Monokai",
     "workbench.iconTheme": "Monokai Pro Icons",
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
     "window.zoomLevel": 0,
+    "gitlens.keymap": "chorded",
+    "git.autofetch": true,
+    "editor.parameterHints": false,
 }
