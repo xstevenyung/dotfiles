@@ -8,81 +8,80 @@ if [ ! -f .first ]; then
 fi
 
 # PHP
-brew install composer
-brew install autoconf
-pecl install xdebug
-pecl install imagick
-if [ ! -f .first ]; then
-    # Valet
-    composer global require laravel/valet
-    valet install
-    valet park ~/Code
-fi
-composer global require spatie/phpunit-watcher
+# brew install composer
+# brew install autoconf
+# pecl install xdebug
+# pecl install imagick
+# if [ ! -f .first ]; then
+#     # Valet
+#     composer global require laravel/valet
+#     valet install
+#     valet park ~/Code
+# fi
+# composer global require spatie/phpunit-watcher
 
 # Javascript
-brew install node
-brew install node@8
-brew install yarn
-yarn global add gulp-cli
+# brew install node
+# brew install node@8
+# brew install yarn
+# yarn global add gulp-cli
 # Tiny Care Terminal
-npm install -g tiny-care-terminal
-npm install -g git-standup
-yarn global add vue-cli
+# npm install -g git-standup
+# yarn global add vue-cli
 
 # Dev
-brew install tig
-brew install tldr
-brew install mysql
-brew cask install zeplin
-brew install git-flow-avh
-brew cask install sequel-pro
-brew cask install postman
+# brew install tig
+# brew install tldr
+# brew install mysql
+# brew cask install zeplin
+# brew install git-flow-avh
+# brew cask install sequel-pro
+# brew cask install postman
 # Visual Studio Code
-brew cask install visual-studio-code
-code --install-extension ms-vscode.atom-keybindings
-code --install-extension bmewburn.vscode-intelephense-client
-code --install-extension eamodio.gitlens
-code --install-extension felixfbecker.php-debug
-code --install-extension felixfbecker.php-pack
-code --install-extension mblode.twig-language
-code --install-extension octref.vetur
-code --install-extension onecentlin.laravel-blade
-code --install-extension shardulm94.trailing-spaces
-code --install-extension vscodevim.vim
-code --install-extension azemoh.one-monokai
-ln -fs ~/Code/dotfiles/settings.json ~/Library/Application\ Support/Code/User/
-ln -fs ~/Code/dotfiles/keybindings.json ~/Library/Application\ Support/Code/User/
-ln -fs ~/Code/dotfiles/snippets ~/Library/Application\ Support/Code/User/
+# brew cask install visual-studio-code
+# code --install-extension ms-vscode.atom-keybindings
+# code --install-extension bmewburn.vscode-intelephense-client
+# code --install-extension eamodio.gitlens
+# code --install-extension felixfbecker.php-debug
+# code --install-extension felixfbecker.php-pack
+# code --install-extension mblode.twig-language
+# code --install-extension octref.vetur
+# code --install-extension onecentlin.laravel-blade
+# code --install-extension shardulm94.trailing-spaces
+# code --install-extension vscodevim.vim
+# code --install-extension azemoh.one-monokai
+# ln -fs ~/Code/dotfiles/settings.json ~/Library/Application\ Support/Code/User/
+# ln -fs ~/Code/dotfiles/keybindings.json ~/Library/Application\ Support/Code/User/
+# ln -fs ~/Code/dotfiles/snippets ~/Library/Application\ Support/Code/User/
 
 # General
-brew cask install vlc
-brew cask install flux
-brew cask install slack
-brew cask install skype
-brew cask install firefox
-brew cask install spotify
-brew cask install evernote
-brew cask install transmission
-brew cask install google-chrome
-brew cask install avast-security
-brew cask install kap
+# brew cask install vlc
+# brew cask install flux
+# brew cask install slack
+# brew cask install skype
+# brew cask install firefox
+# brew cask install spotify
+# brew cask install evernote
+# brew cask install transmission
+# brew cask install google-chrome
+# brew cask install avast-security
+# brew cask install kap
 
 # Install App Store apps
-brew install mas
-mas signin stevenyung@icloud.com
-mas install 1278508951 # Trello
-mas install 409203825 # Numbers
-mas install 973134470 # Be Focused (Pomodoro timer)
+# brew install mas
+# mas signin stevenyung@icloud.com
+# mas install 1278508951 # Trello
+# mas install 409203825 # Numbers
+# mas install 973134470 # Be Focused (Pomodoro timer)
 
-if [ ! -f .first ]; then
-    # Setup MacOS Dock
-    defaults write com.apple.dock static-only -bool TRUE # Only show active apps
-    defaults write com.apple.dock autohide-time-modifier -int 0 # Remove Dock hide / show animation
-    defaults write com.apple.dock autohide -bool true # Enable Dock auto-hide
-    killall Dock # Reset Dock
-    open https://goo.gl/6fMg2D # Redirect to a link enable switch between windows
-fi
+# if [ ! -f .first ]; then
+#     # Setup MacOS Dock
+#     defaults write com.apple.dock static-only -bool TRUE # Only show active apps
+#     defaults write com.apple.dock autohide-time-modifier -int 0 # Remove Dock hide / show animation
+#     defaults write com.apple.dock autohide -bool true # Enable Dock auto-hide
+#     killall Dock # Reset Dock
+#     open https://goo.gl/6fMg2D # Redirect to a link enable switch between windows
+# fi
 
 if [ ! -f .first ]; then
     # Setup git
@@ -91,14 +90,14 @@ if [ ! -f .first ]; then
     git config --global core.editor vi # Setup vi as default editor
 fi
 
-./upgrade # Upgrade
+# ./upgrade # Upgrade
 
 # Generate SSH key
-if [ ! -f ~/.ssh/id_rsa.pub ]; then
-    ssh-keygen -t rsa -C "stevenyung@icloud.com" -b 4096
-fi
+# if [ ! -f ~/.ssh/id_rsa.pub ]; then
+#     ssh-keygen -t rsa -C "stevenyung@icloud.com" -b 4096
+# fi
 
-# Create a empty file which will serve a token to indicate that the setup already happened once
-if [ ! -f .first ]; then
-    touch .first
-fi
+# # Create a empty file which will serve a token to indicate that the setup already happened once
+# if [ ! -f .first ]; then
+#     touch .first
+# fi
