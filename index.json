@@ -1,0 +1,28 @@
+{
+  "homebrew": {
+    "packages": [
+      "apr",
+      "apr-util",
+      "brotli",
+      "c-ares",
+      "composer",
+      "dnsmasq",
+      "httpd",
+      "icu4c",
+      "jansson",
+      "jemalloc",
+      "libev",
+      "libevent",
+      "mysql",
+      "nghttp2",
+      "node",
+      "node@10",
+      "openssl",
+      "pcre",
+      "readline",
+      "redis",
+      "tig",
+      "yarn"
+    ]
+  }
+}
