@@ -24,5 +24,26 @@
       "tig",
       "yarn"
     ]
+  },
+  "homebrewCask": {
+    "packages": [
+      "docker",
+      "firefox",
+      "google-chrome",
+      "ngrok",
+      "notion",
+      "postman",
+      "robo-3t",
+      "sequel-pro",
+      "skype",
+      "slack",
+      "spotify",
+      "transmission",
+      "vagrant",
+      "virtualbox",
+      "visual-studio-code",
+      "vlc",
+      "whatsapp"
+    ]
   }
 }
